@@ -1,5 +1,6 @@
 <!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 <title>Psalta Law Website</title>
+<meta name="description" content="Georgia S. Psalta & Associates LLC, advocates in Pegeia, Paphos. Property transactions, estates and estate planning, corporate services, litigation, divorce and immigration. Greek and English.">
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;1,300&family=Mulish:wght@400;600;700&display=swap">
@@ -22,6 +23,7 @@ a{color:inherit}
 :focus-visible{outline:2px solid var(--gray-dk);outline-offset:3px}
 .wrap{max-width:1160px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
 .band{padding-block:96px}
+section[id]{scroll-margin-top:84px}
 .dark{background:var(--char);color:var(--stone)}
 .dark :focus-visible{outline-color:var(--clay)}
 .claybg{background:var(--clay)}
@@ -90,15 +92,17 @@ nav a.lnk:hover{text-decoration:underline;text-underline-offset:6px}
 
 /* services */
 .svc-head{display:flex;justify-content:space-between;align-items:end;gap:32px;flex-wrap:wrap;margin-bottom:48px}
-.svc{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:20px}
-.card{grid-column:span 2;background:var(--stone);padding:34px 30px;display:flex;flex-direction:column;gap:16px;min-width:0}
-.card.wide{grid-column:span 3}
-.card .tag{font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gray)}
-.card ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px;font-size:15.5px;color:var(--gray-dk)}
+.svc{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:18px}
+.card{grid-column:span 2;background:var(--stone);padding:32px 28px;display:flex;flex-direction:column;gap:16px;min-width:0}
+.card.small{grid-column:span 3}
+.card h3{font-size:26px}
+.card p{font-size:16px;color:var(--gray-dk)}
+.card ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px;font-size:16px;color:var(--gray-dk)}
 .card li{padding-left:22px;position:relative}
 .card li::before{content:"";position:absolute;left:0;top:.72em;width:12px;height:1px;background:var(--gray)}
-@media (max-width:960px){.svc{grid-template-columns:repeat(2,minmax(0,1fr))}.card,.card.wide{grid-column:span 1}.card:last-child{grid-column:1 / -1}}
-@media (max-width:600px){.svc{grid-template-columns:1fr}.card:last-child{grid-column:auto}}
+@media (max-width:900px){.svc{grid-template-columns:1fr}.card,.card.small{grid-column:auto}}
+.ph.assoc{background:var(--char);display:flex;align-items:center;justify-content:center}
+.ph.assoc img{height:45%;width:auto}
 
 /* process */
 .steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px;margin-top:52px;counter-reset:s}
@@ -165,7 +169,7 @@ footer{padding-block:56px 40px}
     <div class="wrap hero-grid">
       <div class="hero-copy">
         <div class="eyebrow"><span lang="en">Advocates · Pegeia, Paphos</span><span lang="el">Δικηγόροι · Πέγεια, Πάφος</span></div>
-        <h1><span lang="en">Wills, property and companies in Cyprus, <em>handled personally.</em></span><span lang="el">Διαθήκες, ακίνητα και εταιρείες στην Κύπρο, <em>με προσωπική φροντίδα.</em></span></h1>
+        <h1><span lang="en">Property, estates and companies in Cyprus, <em>handled personally.</em></span><span lang="el">Ακίνητα, κληρονομιές και εταιρείες στην Κύπρο, <em>με προσωπική φροντίδα.</em></span></h1>
         <p class="lead"><span lang="en">A small law office where you speak directly to your lawyer, and your case gets our full attention from the first meeting to the last signature.</span><span lang="el">Ένα μικρό δικηγορικό γραφείο όπου μιλάτε απευθείας με τον δικηγόρο σας και η υπόθεσή σας έχει όλη μας την προσοχή, από την πρώτη συνάντηση μέχρι την τελευταία υπογραφή.</span></p>
         <div class="ctas">
           <a class="btn" href="#contact"><span lang="en">Book an appointment</span><span lang="el">Κλείστε ραντεβού</span></a>
@@ -175,7 +179,8 @@ footer{padding-block:56px 40px}
       <div style="min-width:0">
       <img class="hero-mono" src="mono-clay.png" alt="">
       <dl class="facts">
-        <div><dt><span lang="en">Practising since</span><span lang="el">Ασκούμε από</span></dt><dd>2016</dd></div>
+        <div><dt><span lang="en">Advocate since</span><span lang="el">Δικηγόρος από</span></dt><dd>2012</dd></div>
+        <div><dt><span lang="en">Own office since</span><span lang="el">Δικό μας γραφείο από</span></dt><dd>2016</dd></div>
         <div><dt><span lang="en">Languages</span><span lang="el">Γλώσσες</span></dt><dd><span lang="en">Greek &amp; English</span><span lang="el">Ελληνικά &amp; Αγγλικά</span></dd></div>
         <div><dt><span lang="en">Office</span><span lang="el">Γραφείο</span></dt><dd><span lang="en">Pegeia, Paphos</span><span lang="el">Πέγεια, Πάφος</span></dd></div>
         <div><dt><span lang="en">Telephone</span><span lang="el">Τηλέφωνο</span></dt><dd>+357 26 270 769</dd></div>
@@ -192,8 +197,8 @@ footer{padding-block:56px 40px}
           <p><span lang="en">We take on only the work we can do properly, so your file is never one of hundreds.</span><span lang="el">Αναλαμβάνουμε μόνο όση δουλειά μπορούμε να κάνουμε σωστά, ώστε η υπόθεσή σας να μην είναι ποτέ μία από εκατοντάδες.</span></p>
         </div>
         <div>
-          <h3><span lang="en">Ten years of experience</span><span lang="el">Δέκα χρόνια εμπειρίας</span></h3>
-          <p><span lang="en">Practising law in Cyprus since 2016, with wills, estates, property and company work.</span><span lang="el">Ασκούμε τη δικηγορία στην Κύπρο από το 2016, σε διαθήκες, περιουσίες, ακίνητα και εταιρικά θέματα.</span></p>
+          <h3><span lang="en">Experience since 2012</span><span lang="el">Εμπειρία από το 2012</span></h3>
+          <p><span lang="en">A registered lawyer since 2012, with our own office since 2016, in property, estates and company work.</span><span lang="el">Εγγεγραμμένη δικηγόρος από το 2012, με δικό μας γραφείο από το 2016, σε ακίνητα, κληρονομιές και εταιρικά θέματα.</span></p>
         </div>
         <div>
           <h3><span lang="en">Trusted associates</span><span lang="el">Αξιόπιστοι συνεργάτες</span></h3>
@@ -210,7 +215,7 @@ footer{padding-block:56px 40px}
       <div class="about-copy">
         <div class="eyebrow"><span lang="en">About the office</span><span lang="el">Για το γραφείο</span></div>
         <h2><span lang="en">A small office, <em>by choice.</em></span><span lang="el">Ένα μικρό γραφείο, <em>από επιλογή.</em></span></h2>
-        <p><span lang="en">Georgia S. Psalta has practised law in Cyprus since 2016. She founded the office in Pegeia to give clients something larger firms often can't: direct access to their lawyer, clear updates, and honest advice.</span><span lang="el">Η Γεωργία Σ. Ψάλτα ασκεί τη δικηγορία στην Κύπρο από το 2016. Ίδρυσε το γραφείο στην Πέγεια για να προσφέρει ό,τι συχνά δεν μπορούν τα μεγάλα γραφεία: άμεση πρόσβαση στον δικηγόρο σας, σαφή ενημέρωση και ειλικρινή συμβουλή.</span></p>
+        <p><span lang="en">Georgia S. Psalta has been a registered lawyer since 2012 and opened her own law office in Pegeia in 2016, to give clients something larger firms often can't: direct access to their lawyer, clear updates, and honest advice.</span><span lang="el">Η Γεωργία Σ. Ψάλτα είναι εγγεγραμμένη δικηγόρος από το 2012 και άνοιξε το δικό της δικηγορικό γραφείο στην Πέγεια το 2016, για να προσφέρει ό,τι συχνά δεν μπορούν τα μεγάλα γραφεία: άμεση πρόσβαση στον δικηγόρο σας, σαφή ενημέρωση και ειλικρινή συμβουλή.</span></p>
         <p><span lang="en">We don't want to be the biggest firm in Cyprus. We want to do good work for people who trust us: peace of mind for our clients, and a good, honest living for our families and associates.</span><span lang="el">Δεν θέλουμε να γίνουμε το μεγαλύτερο γραφείο στην Κύπρο. Θέλουμε να κάνουμε καλή δουλειά για ανθρώπους που μας εμπιστεύονται: ηρεμία για τους πελάτες μας και μια καλή, έντιμη ζωή για τις οικογένειές μας και τους συνεργάτες μας.</span></p>
         <div style="display:flex;flex-direction:column;gap:14px">
           <div class="sig">Georgia S. Psalta</div>
@@ -237,54 +242,39 @@ footer{padding-block:56px 40px}
       </div>
       <div class="svc">
         <article class="card">
-          <div class="tag"><span lang="en">Corporate</span><span lang="el">Εταιρικό</span></div>
-          <h3><span lang="en">Company registration</span><span lang="el">Σύσταση εταιρείας</span></h3>
+          <h3><span lang="en">Property transactions</span><span lang="el">Συναλλαγές ακινήτων</span></h3>
           <ul>
-            <li><span lang="en">Name approval with the Registrar of Companies</span><span lang="el">Έγκριση ονόματος από τον Έφορο Εταιρειών</span></li>
-            <li><span lang="en">Memorandum &amp; Articles of Association</span><span lang="el">Ιδρυτικό Έγγραφο &amp; Καταστατικό</span></li>
-            <li><span lang="en">Registration and certificates</span><span lang="el">Εγγραφή και πιστοποιητικά</span></li>
-            <li><span lang="en">UBO register and annual confirmation</span><span lang="el">Μητρώο πραγματικών δικαιούχων και ετήσια επιβεβαίωση</span></li>
+            <li><span lang="en">Purchases and sales</span><span lang="el">Αγορές και πωλήσεις</span></li>
+            <li><span lang="en">Title deed and permit checks</span><span lang="el">Έλεγχος τίτλου και αδειών</span></li>
+            <li><span lang="en">Contracts and Land Registry lodging</span><span lang="el">Συμβάσεις και κατάθεση στο Κτηματολόγιο</span></li>
+            <li><span lang="en">Transfers and gifts of property</span><span lang="el">Μεταβιβάσεις και δωρεές ακινήτων</span></li>
           </ul>
         </article>
         <article class="card">
-          <div class="tag"><span lang="en">Private clients</span><span lang="el">Ιδιώτες</span></div>
-          <h3><span lang="en">Wills in Cyprus</span><span lang="el">Διαθήκες στην Κύπρο</span></h3>
+          <h3><span lang="en">Estates &amp; estate planning</span><span lang="el">Κληρονομιές &amp; σχεδιασμός περιουσίας</span></h3>
           <ul>
+            <li><span lang="en">Probate and administration of estates</span><span lang="el">Επικύρωση διαθηκών και διαχείριση περιουσίας θανόντων</span></li>
             <li><span lang="en">Wills in Greek and English</span><span lang="el">Διαθήκες στα ελληνικά και αγγλικά</span></li>
-            <li><span lang="en">Signed and witnessed correctly</span><span lang="el">Σωστή υπογραφή και μάρτυρες</span></li>
-            <li><span lang="en">Cyprus wills for owners living abroad</span><span lang="el">Κυπριακές διαθήκες για ιδιοκτήτες που ζουν στο εξωτερικό</span></li>
+            <li><span lang="en">Estate planning and powers of attorney</span><span lang="el">Σχεδιασμός περιουσίας και πληρεξούσια</span></li>
+            <li><span lang="en">Trusts</span><span lang="el">Καταπιστεύματα</span></li>
           </ul>
         </article>
         <article class="card">
-          <div class="tag"><span lang="en">Private clients</span><span lang="el">Ιδιώτες</span></div>
-          <h3><span lang="en">Estate planning</span><span lang="el">Σχεδιασμός περιουσίας</span></h3>
+          <h3><span lang="en">Corporate services</span><span lang="el">Εταιρικές υπηρεσίες</span></h3>
           <ul>
-            <li><span lang="en">Who receives what you own</span><span lang="el">Ποιος κληρονομεί την περιουσία σας</span></li>
-            <li><span lang="en">Powers of attorney</span><span lang="el">Πληρεξούσια</span></li>
-            <li><span lang="en">Choice of law for foreign nationals</span><span lang="el">Επιλογή εφαρμοστέου δικαίου για αλλοδαπούς</span></li>
-            <li><span lang="en">Gifts of property to your children</span><span lang="el">Δωρεές ακινήτων στα παιδιά σας</span></li>
-            <li><span lang="en">Estate administration</span><span lang="el">Διαχείριση περιουσίας θανόντος</span></li>
+            <li><span lang="en">Company registration</span><span lang="el">Σύσταση εταιρειών</span></li>
+            <li><span lang="en">Changes of directors and shareholders</span><span lang="el">Αλλαγές διοικητικών συμβούλων και μετόχων</span></li>
+            <li><span lang="en">UBO register and annual confirmation</span><span lang="el">Μητρώο πραγματικών δικαιούχων και ετήσια επιβεβαίωση</span></li>
+            <li><span lang="en">Filings with the Registrar of Companies</span><span lang="el">Καταχωρήσεις στον Έφορο Εταιρειών</span></li>
           </ul>
         </article>
-        <article class="card wide">
-          <div class="tag"><span lang="en">Property</span><span lang="el">Ακίνητα</span></div>
-          <h3><span lang="en">Property purchase</span><span lang="el">Αγορά ακινήτου</span></h3>
-          <ul>
-            <li><span lang="en">Title deed and encumbrance checks</span><span lang="el">Έλεγχος τίτλου και βαρών</span></li>
-            <li><span lang="en">Planning and building permit review</span><span lang="el">Έλεγχος πολεοδομικής άδειας και άδειας οικοδομής</span></li>
-            <li><span lang="en">Contract review and Land Registry lodging</span><span lang="el">Έλεγχος και κατάθεση σύμβασης στο Κτηματολόγιο</span></li>
-            <li><span lang="en">Off-plan and new-build purchases</span><span lang="el">Αγορές ακινήτων υπό ανέγερση</span></li>
-          </ul>
+        <article class="card small">
+          <h3><span lang="en">Litigation</span><span lang="el">Δικαστικές υποθέσεις</span></h3>
+          <p><span lang="en">Civil cases before the Cyprus courts, including property disputes, and family court cases: divorce and divorce by mutual consent.</span><span lang="el">Αστικές υποθέσεις ενώπιον των κυπριακών δικαστηρίων, όπως διαφορές για ακίνητα, και υποθέσεις Οικογενειακού Δικαστηρίου: διαζύγια και συναινετικά διαζύγια.</span></p>
         </article>
-        <article class="card wide">
-          <div class="tag"><span lang="en">Property</span><span lang="el">Ακίνητα</span></div>
-          <h3><span lang="en">Property sale</span><span lang="el">Πώληση ακινήτου</span></h3>
-          <ul>
-            <li><span lang="en">Sale contract drafting</span><span lang="el">Σύνταξη πωλητηρίου εγγράφου</span></li>
-            <li><span lang="en">Taxes and clearances before transfer</span><span lang="el">Φόροι και εκκαθαρίσεις πριν τη μεταβίβαση</span></li>
-            <li><span lang="en">Transfer at the Land Registry</span><span lang="el">Μεταβίβαση στο Κτηματολόγιο</span></li>
-            <li><span lang="en">Making sure you are paid safely</span><span lang="el">Ασφαλής είσπραξη του τιμήματος</span></li>
-          </ul>
+        <article class="card small">
+          <h3><span lang="en">Immigration</span><span lang="el">Μετανάστευση</span></h3>
+          <p><span lang="en">Residence permits and related applications for people moving to Cyprus.</span><span lang="el">Άδειες παραμονής και σχετικές αιτήσεις για όσους μετακομίζουν στην Κύπρο.</span></p>
         </article>
       </div>
     </div>
@@ -308,9 +298,23 @@ footer{padding-block:56px 40px}
       <div class="eyebrow"><span lang="en">Our team</span><span lang="el">Η ομάδα μας</span></div>
       <h2 style="margin-top:16px"><span lang="en">The people <em>on your case</em></span><span lang="el">Οι άνθρωποι <em>της υπόθεσής σας</em></span></h2>
       <div class="team">
-        <div class="person"><img class="ph" src="georgia.jpg" alt="" style="object-fit:cover;object-position:50% 15%;width:100%"><h3>Georgia S. Psalta</h3><div class="role"><span lang="en">Advocate &amp; Legal Consultant · Founder</span><span lang="el">Δικηγόρος &amp; Νομική Σύμβουλος · Ιδρύτρια</span></div><p><span lang="en">Practising law in Cyprus since 2016. Founder of the office in Pegeia, and the lawyer handling your case from start to finish.</span><span lang="el">Ασκεί τη δικηγορία στην Κύπρο από το 2016. Ιδρύτρια του γραφείου στην Πέγεια και η δικηγόρος που χειρίζεται την υπόθεσή σας από την αρχή ως το τέλος.</span></p></div>
-        <div class="person"><img class="ph" src="marina.jpg" alt="" style="object-fit:cover;object-position:50% 30%;width:100%"><h3><span lang="en">Marina</span><span lang="el">Μαρίνα</span></h3><div class="role"><span lang="en">Office secretary</span><span lang="el">Γραμματέας</span></div><p><span lang="en">The first point of contact at our office and your go-to person for whatever you need. Our office angel.</span><span lang="el">Το πρώτο σημείο επαφής στο γραφείο μας και ο άνθρωπός σας για ό,τι χρειαστείτε. Ο άγγελος του γραφείου μας.</span></p></div>
-        <div class="person"><img class="ph" src="panagiota.jpg" alt="" style="object-fit:cover;object-position:50% 25%;width:100%"><h3>Panagiota Tsapoutshi</h3><div class="role"><span lang="en">Advocate · Outside associate</span><span lang="el">Δικηγόρος · Εξωτερική συνεργάτιδα</span></div><p><span lang="en">A lawyer and a friend since our school years, for more than 25 years. She helps our clients with their affidavits, to make things easier for them.</span><span lang="el">Δικηγόρος και φίλη από τα χρόνια του γυμνασίου, εδώ και πάνω από 25 χρόνια. Βοηθά τους πελάτες μας με τις ένορκες δηλώσεις τους, για να τους διευκολύνει.</span></p></div>
+        <div class="person"><img class="ph" src="georgia.jpg" alt="" style="object-fit:cover;object-position:50% 15%;width:100%"><h3>Georgia S. Psalta</h3><div class="role"><span lang="en">Advocate &amp; Legal Consultant · Founder</span><span lang="el">Δικηγόρος &amp; Νομική Σύμβουλος · Ιδρύτρια</span></div><p><span lang="en">Registered lawyer since 2012. Opened her own office in Pegeia in 2016, and handles your case from start to finish.</span><span lang="el">Εγγεγραμμένη δικηγόρος από το 2012. Άνοιξε το δικό της γραφείο στην Πέγεια το 2016 και χειρίζεται την υπόθεσή σας από την αρχή ως το τέλος.</span></p></div>
+        <div class="person"><div class="ph assoc"><img src="mono-clay.png" alt=""></div><h3><span lang="en">Marina</span><span lang="el">Μαρίνα</span></h3><div class="role"><span lang="en">Office secretary</span><span lang="el">Γραμματέας</span></div><p><span lang="en">The first point of contact at our office and your go-to person for whatever you need. Our office angel.</span><span lang="el">Το πρώτο σημείο επαφής στο γραφείο μας και ο άνθρωπός σας για ό,τι χρειαστείτε. Ο άγγελος του γραφείου μας.</span></p></div>
+        <div class="person"><div class="ph assoc"><img src="mono-clay.png" alt=""></div><h3><span lang="en">Our associates</span><span lang="el">Οι συνεργάτες μας</span></h3><div class="role"><span lang="en">Outside associates</span><span lang="el">Εξωτερικοί συνεργάτες</span></div><p><span lang="en">Trusted professionals who work alongside us when a case needs extra hands, while you keep one point of contact.</span><span lang="el">Αξιόπιστοι επαγγελματίες που συνεργάζονται μαζί μας όταν μια υπόθεση το χρειάζεται, ενώ εσείς έχετε πάντα ένα σημείο επαφής.</span></p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band dark" id="join" style="padding-block:72px">
+    <div class="wrap" style="display:flex;justify-content:space-between;align-items:center;gap:40px;flex-wrap:wrap">
+      <div style="display:flex;flex-direction:column;gap:18px;min-width:0;flex:1 1 520px">
+        <div class="eyebrow"><span lang="en">Join us</span><span lang="el">Ελάτε μαζί μας</span></div>
+        <h2><span lang="en">A small office, <em>with room to grow.</em></span><span lang="el">Ένα μικρό γραφείο <em>με προοπτικές.</em></span></h2>
+        <p class="lead"><span lang="en">If you would like to join us or work with us, send us an email. We are always open to collaborations.</span><span lang="el">Αν θέλετε να ενταχθείτε στην ομάδα μας ή να συνεργαστείτε μαζί μας, στείλτε μας email. Είμαστε πάντα ανοιχτοί σε συνεργασίες.</span></p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:12px;align-items:flex-start">
+        <div style="font-family:var(--serif);font-weight:300;font-size:26px;user-select:all">lawyers.cy@outlook.com</div>
+        <a class="btn" href="mailto:lawyers.cy@outlook.com?subject=Collaboration"><span lang="en">Email us</span><span lang="el">Στείλτε email</span></a>
       </div>
     </div>
   </section>
@@ -326,11 +330,11 @@ footer{padding-block:56px 40px}
           <div class="f"><label for="tl"><span lang="en">Phone</span><span lang="el">Τηλέφωνο</span></label><input id="tl" name="tl" type="tel" autocomplete="tel"></div>
           <div class="f"><label for="sv"><span lang="en">Service</span><span lang="el">Υπηρεσία</span></label>
             <select id="sv" name="sv">
-              <option>Company registration / Σύσταση εταιρείας</option>
-              <option>Will / Διαθήκη</option>
-              <option>Estate planning / Σχεδιασμός περιουσίας</option>
-              <option>Property purchase / Αγορά ακινήτου</option>
-              <option>Property sale / Πώληση ακινήτου</option>
+              <option>Property transaction / Συναλλαγή ακινήτου</option>
+              <option>Estates, wills &amp; trusts / Κληρονομιές, διαθήκες &amp; καταπιστεύματα</option>
+              <option>Corporate services / Εταιρικές υπηρεσίες</option>
+              <option>Litigation &amp; family court / Δικαστική υπόθεση &amp; Οικογενειακό Δικαστήριο</option>
+              <option>Immigration / Μετανάστευση</option>
               <option>Other / Άλλο</option>
             </select></div>
           <div class="f full"><label for="ms"><span lang="en">Message</span><span lang="el">Μήνυμα</span></label><textarea id="ms" name="ms" required></textarea></div>
@@ -339,9 +343,9 @@ footer{padding-block:56px 40px}
             <span id="err" style="color:#8A2E1F;font-size:15px" hidden></span>
           </div>
           <div class="out" id="out" hidden>
-            <strong><span lang="en">Your message is ready. Copy it and email it to gpsalta@psaltalaw.com, or call us.</span><span lang="el">Το μήνυμά σας είναι έτοιμο. Αντιγράψτε το και στείλτε το στο gpsalta@psaltalaw.com ή τηλεφωνήστε μας.</span></strong>
+            <strong><span lang="en">Your message is ready. Send it to lawyers.cy@outlook.com, or call us on +357 26 270 769.</span><span lang="el">Το μήνυμά σας είναι έτοιμο. Στείλτε το στο lawyers.cy@outlook.com ή τηλεφωνήστε μας στο +357 26 270 769.</span></strong>
             <pre id="txt"></pre>
-            <div class="row"><button class="btn" type="button" id="cp"><span lang="en">Copy message</span><span lang="el">Αντιγραφή</span></button><span id="cpd" style="font-size:15px" hidden><span lang="en">Copied</span><span lang="el">Αντιγράφηκε</span></span></div>
+            <div class="row"><a class="btn" id="mail" href="mailto:lawyers.cy@outlook.com"><span lang="en">Open in my email app</span><span lang="el">Άνοιγμα στο email μου</span></a><button class="btn ghost" type="button" id="cp"><span lang="en">Copy message</span><span lang="el">Αντιγραφή</span></button><span id="cpd" style="font-size:15px" hidden><span lang="en">Copied</span><span lang="el">Αντιγράφηκε</span></span></div>
           </div>
         </form>
       </div>
@@ -351,7 +355,8 @@ footer{padding-block:56px 40px}
           <div><dt><span lang="en">Address</span><span lang="el">Διεύθυνση</span></dt><dd><span lang="en">Michalaki Kyprianou 104, 8560 Pegeia, Paphos, Cyprus</span><span lang="el">Μιχαλάκη Κυπριανού 104, 8560 Πέγεια, Πάφος, Κύπρος</span></dd></div>
           <div><dt><span lang="en">Telephone</span><span lang="el">Τηλέφωνο</span></dt><dd>+357 26 270 769</dd></div>
           <div><dt>Fax</dt><dd>+357 26 270 759</dd></div>
-          <div><dt>Email</dt><dd>gpsalta@psaltalaw.com</dd></div>
+          <div><dt><span lang="en">New enquiries</span><span lang="el">Νέα αιτήματα</span></dt><dd>lawyers.cy@outlook.com</dd></div>
+          <div><dt><span lang="en">Office email</span><span lang="el">Email γραφείου</span></dt><dd>gpsalta@psaltalaw.com</dd></div>
           <div><dt><span lang="en">Hours</span><span lang="el">Ώρες</span></dt><dd class="na"><span lang="en">By appointment</span><span lang="el">Κατόπιν ραντεβού</span></dd></div>
         </dl>
         <div><a class="btn ghost" href="https://www.google.com/maps/search/?api=1&amp;query=Michalaki+Kyprianou+104+8560+Pegeia+Cyprus" target="_blank" rel="noopener"><span lang="en">Open in Google Maps</span><span lang="el">Άνοιγμα στους Χάρτες Google</span></a></div>
@@ -391,7 +396,9 @@ footer{padding-block:56px 40px}
       err.hidden=false; out.hidden=true; return;
     }
     err.hidden=true;
-    txt.textContent='To: gpsalta@psaltalaw.com\nSubject: '+f.sv.value+'\n\nName: '+nm+'\nEmail: '+em+(f.tl.value.trim()?'\nPhone: '+f.tl.value.trim():'')+'\n\n'+ms;
+    var body='Name: '+nm+'\nEmail: '+em+(f.tl.value.trim()?'\nPhone: '+f.tl.value.trim():'')+'\n\n'+ms;
+    txt.textContent='To: lawyers.cy@outlook.com\nSubject: New enquiry: '+f.sv.value+'\n\n'+body;
+    document.getElementById('mail').href='mailto:lawyers.cy@outlook.com?subject='+encodeURIComponent('New enquiry: '+f.sv.value)+'&body='+encodeURIComponent(body);
     out.hidden=false;
     document.getElementById('cpd').hidden=true;
   });
