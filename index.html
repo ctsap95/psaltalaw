@@ -1,414 +1,1238 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
-<title>Psalta Law Website</title>
-<meta name="description" content="Georgia S. Psalta & Associates LLC, advocates in Pegeia, Paphos. Property transactions, estates and estate planning, corporate services, litigation, divorce and immigration. Greek and English.">
-<meta name="claude:viewport-fit-sides" content="cover">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;1,300&family=Mulish:wght@400;600;700&display=swap">
-<link rel="icon" type="image/png" href="mono-clay.png">
-<style>
-/* Layout: one long page of alternating stone and charcoal bands; serif headlines, quiet sans body, hairline rules from the stationery. Single committed light look. */
-:root{
-  --stone:#F4F2ED; --clay:#D8D4CB; --gray:#8A8685; --gray-dk:#55514F;
-  --ink:#2B2A28; --char:#33312F; --char-2:#3D3B38; --line:#C9C4BA;
-  --serif:'Jost', 'Futura', 'Century Gothic', 'Avenir Next', sans-serif;
-  --sans:'Mulish', 'Avenir Next', Avenir, 'Segoe UI', Helvetica, Arial, sans-serif;
-  color-scheme: light;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
-body{background:var(--stone);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6}
-body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--stone)}
-html[data-lang="en"] [lang="el"], html[data-lang="el"] [lang="en"]{display:none}
-a{color:inherit}
-:focus-visible{outline:2px solid var(--gray-dk);outline-offset:3px}
-.wrap{max-width:1160px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
-.band{padding-block:96px}
-section[id]{scroll-margin-top:84px}
-.dark{background:var(--char);color:var(--stone)}
-.dark :focus-visible{outline-color:var(--clay)}
-.claybg{background:var(--clay)}
-.eyebrow{font-size:13px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--gray-dk)}
-.dark .eyebrow{color:var(--clay)}
-h1,h2,h3{font-family:var(--serif);font-weight:300;line-height:1.08;margin:0;text-wrap:balance;letter-spacing:-.005em}
-h1{font-size:clamp(40px,6.2vw,74px)}
-h2{font-size:clamp(32px,4.4vw,50px)}
-h3{font-size:26px;font-weight:400}
-h1 em,h2 em{font-style:italic;color:var(--gray-dk)}
-.dark h1 em,.dark h2 em{color:var(--clay)}
-p{margin:0;max-width:62ch}
-.lead{font-size:20px;color:var(--gray-dk)}
-.dark .lead{color:var(--clay)}
-.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 26px;font:700 15px/1 var(--sans);letter-spacing:.06em;text-decoration:none;border:2px solid var(--ink);background:var(--ink);color:var(--stone);cursor:pointer}
-.btn:hover{background:var(--char-2)}
-.btn.ghost{background:transparent;color:var(--ink)}
-.btn.ghost:hover{background:var(--clay)}
-.dark .btn{background:var(--stone);color:var(--ink);border-color:var(--stone)}
-.dark .btn:hover{background:var(--clay)}
-.dark .btn.ghost{background:transparent;color:var(--stone)}
-.dark .btn.ghost:hover{background:var(--char-2)}
+<!doctype html>
+<html>
 
-/* header */
-header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--stone);border-bottom:1px solid var(--line)}
-.bar{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:76px;flex-wrap:wrap;padding-block:10px}
-.mark{display:flex;text-decoration:none;line-height:0}
-.mark img{height:48px;width:auto}
-@media (max-width:520px){.mark img{height:38px}}
-.hero-mono{height:120px;width:auto;margin-bottom:28px}
-nav{display:flex;align-items:center;gap:26px;flex-wrap:wrap}
-nav a.lnk{text-decoration:none;font-size:15px;font-weight:600;padding:10px 0}
-nav a.lnk:hover{text-decoration:underline;text-underline-offset:6px}
-.langs{display:flex;border:1px solid var(--line)}
-.langs button{font:700 13px var(--sans);letter-spacing:.08em;padding:10px 12px;min-height:40px;background:transparent;border:0;color:var(--gray-dk);cursor:pointer}
-.langs button[aria-pressed="true"]{background:var(--ink);color:var(--stone)}
-@media (max-width:820px){nav a.lnk{display:none}}
-
-/* hero */
-.hero{padding-block:88px 96px}
-.hero-grid{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:64px;align-items:end}
-.hero-copy{display:flex;flex-direction:column;gap:28px}
-.ctas{display:flex;gap:14px;flex-wrap:wrap}
-.facts{border-top:2px solid var(--clay);display:flex;flex-direction:column}
-.facts div{display:flex;justify-content:space-between;gap:16px;padding:18px 0;border-bottom:1px solid var(--char-2);font-size:16px}
-.facts dt{color:var(--clay);font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;padding-top:4px}
-.facts dd{margin:0;text-align:right;font-family:var(--serif);font-size:24px}
-@media (max-width:860px){.hero-grid{grid-template-columns:1fr;gap:48px}}
-
-/* highlights */
-.three{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border-top:2px solid var(--ink)}
-.three > div{padding:32px 32px 0 0;display:flex;flex-direction:column;gap:12px}
-.three > div + div{padding-left:32px;border-left:1px solid var(--line)}
-.three h3{font-size:26px}
-.three p{color:var(--gray-dk);font-size:16px}
-@media (max-width:760px){.three{grid-template-columns:1fr}.three > div,.three > div + div{padding:28px 0;border-left:0;border-bottom:1px solid var(--line)}}
-
-/* about */
-.about{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:72px;align-items:center}
-.portrait{aspect-ratio:4/5;max-width:100%;background:var(--char);color:var(--clay);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px}
-.creds{display:flex;flex-direction:column;gap:2px;font-size:15px;color:var(--gray-dk);border-left:1px solid var(--gray);padding-left:16px}
-.portrait span{font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase}
-.about-copy{display:flex;flex-direction:column;gap:22px;min-width:0}
-.sig{font-family:var(--serif);font-weight:300;font-size:26px;letter-spacing:.06em;text-transform:uppercase}
-@media (max-width:860px){.about{grid-template-columns:1fr;gap:40px}.portrait{max-width:420px}}
-
-/* services */
-.svc-head{display:flex;justify-content:space-between;align-items:end;gap:32px;flex-wrap:wrap;margin-bottom:48px}
-.svc{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:18px}
-.card{grid-column:span 2;background:var(--stone);padding:32px 28px;display:flex;flex-direction:column;gap:16px;min-width:0}
-.card.small{grid-column:span 3}
-.card h3{font-size:26px}
-.card p{font-size:16px;color:var(--gray-dk)}
-.card ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px;font-size:16px;color:var(--gray-dk)}
-.card li{padding-left:22px;position:relative}
-.card li::before{content:"";position:absolute;left:0;top:.72em;width:12px;height:1px;background:var(--gray)}
-@media (max-width:900px){.svc{grid-template-columns:1fr}.card,.card.small{grid-column:auto}}
-.ph.assoc{background:var(--char);display:flex;align-items:center;justify-content:center}
-.ph.assoc img{height:45%;width:auto}
-
-/* process */
-.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px;margin-top:52px;counter-reset:s}
-.step{border-top:1px solid var(--gray);padding-top:22px;display:flex;flex-direction:column;gap:10px}
-.step b{font-family:var(--serif);font-size:44px;font-weight:300;line-height:1;color:var(--clay)}
-.step h3{font-size:24px}
-.step p{color:var(--clay);font-size:15.5px}
-@media (max-width:900px){.steps{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (max-width:520px){.steps{grid-template-columns:1fr}}
-
-/* team */
-.team{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px;margin-top:48px}
-.person{display:flex;flex-direction:column;gap:10px}
-.ph{aspect-ratio:1;max-width:100%;background:var(--clay);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:56px;color:var(--gray-dk)}
-.person h3{font-size:24px;margin-top:8px}
-.person .role{font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gray-dk)}
-.person p{font-size:15.5px;color:var(--gray-dk)}
-@media (max-width:760px){.team{grid-template-columns:1fr;max-width:420px}}
-
-/* contact */
-.contact{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:72px}
-form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
-.f{display:flex;flex-direction:column;gap:6px;min-width:0}
-.f.full{grid-column:1 / -1}
-label{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gray-dk)}
-input,select,textarea{font:16px var(--sans);color:var(--ink);background:#FFFFFF;border:1px solid var(--line);padding:13px 14px;min-height:48px;width:100%;border-radius:0}
-textarea{min-height:140px;resize:vertical}
-input:focus,select:focus,textarea:focus{outline:2px solid var(--ink);outline-offset:0;border-color:var(--ink)}
-.out{grid-column:1 / -1;background:var(--clay);padding:22px;display:flex;flex-direction:column;gap:12px}
-.out pre{margin:0;white-space:pre-wrap;font:15px/1.5 var(--sans);background:var(--stone);padding:14px;max-height:220px;overflow:auto}
-.out .row{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
-.find{display:flex;flex-direction:column;gap:0;border-top:2px solid var(--ink)}
-.find div{padding:20px 0;border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:4px}
-.find dt{font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gray-dk)}
-.find dd{margin:0;font-size:18px;user-select:all}
-.find dd.na{user-select:auto}
-@media (max-width:860px){.contact{grid-template-columns:1fr;gap:56px}}
-@media (max-width:520px){form{grid-template-columns:1fr}}
-
-footer{padding-block:56px 40px}
-.foot{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap;align-items:end}
-.foot small{color:var(--clay);font-size:13px}
-.foot .mark img{height:42px}
-</style>
-
-<header>
-  <div class="wrap bar">
-    <a class="mark" href="#top"><img src="logo-gray.png" alt="Georgia S. Psalta &amp; Associates LLC"></a>
-    <nav aria-label="Main">
-      <a class="lnk" href="#services"><span lang="en">Services</span><span lang="el">Υπηρεσίες</span></a>
-      <a class="lnk" href="#about"><span lang="en">About</span><span lang="el">Σχετικά</span></a>
-      <a class="lnk" href="#team"><span lang="en">Team</span><span lang="el">Ομάδα</span></a>
-      <div class="langs" role="group" aria-label="Language">
-        <button type="button" id="b-en" data-l="en" aria-pressed="true">EN</button>
-        <button type="button" id="b-el" data-l="el" aria-pressed="false">ΕΛ</button>
-      </div>
-      <a class="btn" href="#contact"><span lang="en">Contact</span><span lang="el">Επικοινωνία</span></a>
-    </nav>
-  </div>
-</header>
-
-<main id="top">
-  <section class="dark hero">
-    <div class="wrap hero-grid">
-      <div class="hero-copy">
-        <div class="eyebrow"><span lang="en">Advocates · Pegeia, Paphos</span><span lang="el">Δικηγόροι · Πέγεια, Πάφος</span></div>
-        <h1><span lang="en">Property, estates and companies in Cyprus, <em>handled personally.</em></span><span lang="el">Ακίνητα, κληρονομιές και εταιρείες στην Κύπρο, <em>με προσωπική φροντίδα.</em></span></h1>
-        <p class="lead"><span lang="en">A small law office where you speak directly to your lawyer, and your case gets our full attention from the first meeting to the last signature.</span><span lang="el">Ένα μικρό δικηγορικό γραφείο όπου μιλάτε απευθείας με τον δικηγόρο σας και η υπόθεσή σας έχει όλη μας την προσοχή, από την πρώτη συνάντηση μέχρι την τελευταία υπογραφή.</span></p>
-        <div class="ctas">
-          <a class="btn" href="#contact"><span lang="en">Book an appointment</span><span lang="el">Κλείστε ραντεβού</span></a>
-          <a class="btn ghost" href="#services"><span lang="en">Our services</span><span lang="el">Οι υπηρεσίες μας</span></a>
-        </div>
-      </div>
-      <div style="min-width:0">
-      <img class="hero-mono" src="mono-clay.png" alt="">
-      <dl class="facts">
-        <div><dt><span lang="en">Advocate since</span><span lang="el">Δικηγόρος από</span></dt><dd>2012</dd></div>
-        <div><dt><span lang="en">Own office since</span><span lang="el">Δικό μας γραφείο από</span></dt><dd>2016</dd></div>
-        <div><dt><span lang="en">Languages</span><span lang="el">Γλώσσες</span></dt><dd><span lang="en">Greek &amp; English</span><span lang="el">Ελληνικά &amp; Αγγλικά</span></dd></div>
-        <div><dt><span lang="en">Office</span><span lang="el">Γραφείο</span></dt><dd><span lang="en">Pegeia, Paphos</span><span lang="el">Πέγεια, Πάφος</span></dd></div>
-        <div><dt><span lang="en">Telephone</span><span lang="el">Τηλέφωνο</span></dt><dd>+357 26 270 769</dd></div>
-      </dl>
-      </div>
-    </div>
-  </section>
-
-  <section class="band">
-    <div class="wrap">
-      <div class="three">
-        <div>
-          <h3><span lang="en">Full attention</span><span lang="el">Πλήρης προσοχή</span></h3>
-          <p><span lang="en">We take on only the work we can do properly, so your file is never one of hundreds.</span><span lang="el">Αναλαμβάνουμε μόνο όση δουλειά μπορούμε να κάνουμε σωστά, ώστε η υπόθεσή σας να μην είναι ποτέ μία από εκατοντάδες.</span></p>
-        </div>
-        <div>
-          <h3><span lang="en">Experience since 2012</span><span lang="el">Εμπειρία από το 2012</span></h3>
-          <p><span lang="en">A registered lawyer since 2012, with our own office since 2016, in property, estates and company work.</span><span lang="el">Εγγεγραμμένη δικηγόρος από το 2012, με δικό μας γραφείο από το 2016, σε ακίνητα, κληρονομιές και εταιρικά θέματα.</span></p>
-        </div>
-        <div>
-          <h3><span lang="en">Trusted associates</span><span lang="el">Αξιόπιστοι συνεργάτες</span></h3>
-          <p><span lang="en">When a case needs extra hands, outside associates work alongside us, and you still deal with one point of contact.</span><span lang="el">Όταν μια υπόθεση χρειάζεται περισσότερα χέρια, εξωτερικοί συνεργάτες δουλεύουν μαζί μας και εσείς έχετε πάντα ένα σημείο επαφής.</span></p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="band" id="about" style="padding-top:24px">
-    <div class="wrap about">
-      <img class="portrait" src="georgia.jpg" alt="Georgia S. Psalta, Advocate" style="object-fit:cover;object-position:50% 20%;width:100%">
-
-      <div class="about-copy">
-        <div class="eyebrow"><span lang="en">About the office</span><span lang="el">Για το γραφείο</span></div>
-        <h2><span lang="en">A small office, <em>by choice.</em></span><span lang="el">Ένα μικρό γραφείο, <em>από επιλογή.</em></span></h2>
-        <p><span lang="en">Georgia S. Psalta has been a registered lawyer since 2012 and opened her own law office in Pegeia in 2016, to give clients something larger firms often can't: direct access to their lawyer, clear updates, and honest advice.</span><span lang="el">Η Γεωργία Σ. Ψάλτα είναι εγγεγραμμένη δικηγόρος από το 2012 και άνοιξε το δικό της δικηγορικό γραφείο στην Πέγεια το 2016, για να προσφέρει ό,τι συχνά δεν μπορούν τα μεγάλα γραφεία: άμεση πρόσβαση στον δικηγόρο σας, σαφή ενημέρωση και ειλικρινή συμβουλή.</span></p>
-        <p><span lang="en">We don't want to be the biggest firm in Cyprus. We want to do good work for people who trust us: peace of mind for our clients, and a good, honest living for our families and associates.</span><span lang="el">Δεν θέλουμε να γίνουμε το μεγαλύτερο γραφείο στην Κύπρο. Θέλουμε να κάνουμε καλή δουλειά για ανθρώπους που μας εμπιστεύονται: ηρεμία για τους πελάτες μας και μια καλή, έντιμη ζωή για τις οικογένειές μας και τους συνεργάτες μας.</span></p>
-        <div style="display:flex;flex-direction:column;gap:14px">
-          <div class="sig">Georgia S. Psalta</div>
-          <div class="creds">
-            <span lang="en">Advocate &amp; Legal Consultant</span><span lang="el">Δικηγόρος &amp; Νομική Σύμβουλος</span>
-            <span>LLB (Middlesex University, U.K.)</span>
-            <span>P.G.Dip Law (Middlesex University, U.K.)</span>
-            <span lang="en">Member of the Cyprus Bar Association</span><span lang="el">Μέλος του Παγκύπριου Δικηγορικού Συλλόγου</span>
-          </div>
-        </div>
-        <div><a class="btn" href="#contact"><span lang="en">Contact us</span><span lang="el">Επικοινωνήστε μαζί μας</span></a></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="band claybg" id="services">
-    <div class="wrap">
-      <div class="svc-head">
-        <div style="display:flex;flex-direction:column;gap:16px">
-          <div class="eyebrow"><span lang="en">What we do</span><span lang="el">Τι κάνουμε</span></div>
-          <h2><span lang="en">Our services</span><span lang="el">Οι υπηρεσίες μας</span></h2>
-        </div>
-        <p style="max-width:44ch;color:var(--gray-dk)"><span lang="en">For private clients, families and businesses in Paphos and across Cyprus.</span><span lang="el">Για ιδιώτες, οικογένειες και επιχειρήσεις στην Πάφο και σε όλη την Κύπρο.</span></p>
-      </div>
-      <div class="svc">
-        <article class="card">
-          <h3><span lang="en">Property transactions</span><span lang="el">Συναλλαγές ακινήτων</span></h3>
-          <ul>
-            <li><span lang="en">Purchases and sales</span><span lang="el">Αγορές και πωλήσεις</span></li>
-            <li><span lang="en">Title deed and permit checks</span><span lang="el">Έλεγχος τίτλου και αδειών</span></li>
-            <li><span lang="en">Contracts and Land Registry lodging</span><span lang="el">Συμβάσεις και κατάθεση στο Κτηματολόγιο</span></li>
-            <li><span lang="en">Transfers and gifts of property</span><span lang="el">Μεταβιβάσεις και δωρεές ακινήτων</span></li>
-          </ul>
-        </article>
-        <article class="card">
-          <h3><span lang="en">Estates &amp; estate planning</span><span lang="el">Κληρονομιές &amp; σχεδιασμός περιουσίας</span></h3>
-          <ul>
-            <li><span lang="en">Probate and administration of estates</span><span lang="el">Επικύρωση διαθηκών και διαχείριση περιουσίας θανόντων</span></li>
-            <li><span lang="en">Wills in Greek and English</span><span lang="el">Διαθήκες στα ελληνικά και αγγλικά</span></li>
-            <li><span lang="en">Estate planning and powers of attorney</span><span lang="el">Σχεδιασμός περιουσίας και πληρεξούσια</span></li>
-            <li><span lang="en">Trusts</span><span lang="el">Καταπιστεύματα</span></li>
-          </ul>
-        </article>
-        <article class="card">
-          <h3><span lang="en">Corporate services</span><span lang="el">Εταιρικές υπηρεσίες</span></h3>
-          <ul>
-            <li><span lang="en">Company registration</span><span lang="el">Σύσταση εταιρειών</span></li>
-            <li><span lang="en">Changes of directors and shareholders</span><span lang="el">Αλλαγές διοικητικών συμβούλων και μετόχων</span></li>
-            <li><span lang="en">UBO register and annual confirmation</span><span lang="el">Μητρώο πραγματικών δικαιούχων και ετήσια επιβεβαίωση</span></li>
-            <li><span lang="en">Filings with the Registrar of Companies</span><span lang="el">Καταχωρήσεις στον Έφορο Εταιρειών</span></li>
-          </ul>
-        </article>
-        <article class="card small">
-          <h3><span lang="en">Litigation</span><span lang="el">Δικαστικές υποθέσεις</span></h3>
-          <p><span lang="en">Civil cases before the Cyprus courts, including property disputes, and family court cases: divorce and divorce by mutual consent.</span><span lang="el">Αστικές υποθέσεις ενώπιον των κυπριακών δικαστηρίων, όπως διαφορές για ακίνητα, και υποθέσεις Οικογενειακού Δικαστηρίου: διαζύγια και συναινετικά διαζύγια.</span></p>
-        </article>
-        <article class="card small">
-          <h3><span lang="en">Immigration</span><span lang="el">Μετανάστευση</span></h3>
-          <p><span lang="en">Residence permits and related applications for people moving to Cyprus.</span><span lang="el">Άδειες παραμονής και σχετικές αιτήσεις για όσους μετακομίζουν στην Κύπρο.</span></p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="band dark">
-    <div class="wrap">
-      <div class="eyebrow"><span lang="en">How we work</span><span lang="el">Πώς δουλεύουμε</span></div>
-      <h2 style="margin-top:16px"><span lang="en">Four steps, <em>no surprises.</em></span><span lang="el">Τέσσερα βήματα, <em>χωρίς εκπλήξεις.</em></span></h2>
-      <div class="steps">
-        <div class="step"><b>1</b><h3><span lang="en">First meeting</span><span lang="el">Πρώτη συνάντηση</span></h3><p><span lang="en">We listen, look at your documents and explain your options.</span><span lang="el">Ακούμε, εξετάζουμε τα έγγραφά σας και εξηγούμε τις επιλογές σας.</span></p></div>
-        <div class="step"><b>2</b><h3><span lang="en">Clear plan</span><span lang="el">Σαφές πλάνο</span></h3><p><span lang="en">You receive the steps, the timing and our fee in writing.</span><span lang="el">Λαμβάνετε γραπτώς τα βήματα, το χρονοδιάγραμμα και την αμοιβή μας.</span></p></div>
-        <div class="step"><b>3</b><h3><span lang="en">We do the work</span><span lang="el">Αναλαμβάνουμε</span></h3><p><span lang="en">We handle the paperwork and keep you updated along the way.</span><span lang="el">Χειριζόμαστε τα έγγραφα και σας ενημερώνουμε σε κάθε στάδιο.</span></p></div>
-        <div class="step"><b>4</b><h3><span lang="en">Completion</span><span lang="el">Ολοκλήρωση</span></h3><p><span lang="en">You receive your final documents and a clear summary.</span><span lang="el">Λαμβάνετε τα τελικά έγγραφα και μια σαφή σύνοψη.</span></p></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="band" id="team">
-    <div class="wrap">
-      <div class="eyebrow"><span lang="en">Our team</span><span lang="el">Η ομάδα μας</span></div>
-      <h2 style="margin-top:16px"><span lang="en">The people <em>on your case</em></span><span lang="el">Οι άνθρωποι <em>της υπόθεσής σας</em></span></h2>
-      <div class="team">
-        <div class="person"><img class="ph" src="georgia.jpg" alt="" style="object-fit:cover;object-position:50% 15%;width:100%"><h3>Georgia S. Psalta</h3><div class="role"><span lang="en">Advocate &amp; Legal Consultant · Founder</span><span lang="el">Δικηγόρος &amp; Νομική Σύμβουλος · Ιδρύτρια</span></div><p><span lang="en">Registered lawyer since 2012. Opened her own office in Pegeia in 2016, and handles your case from start to finish.</span><span lang="el">Εγγεγραμμένη δικηγόρος από το 2012. Άνοιξε το δικό της γραφείο στην Πέγεια το 2016 και χειρίζεται την υπόθεσή σας από την αρχή ως το τέλος.</span></p></div>
-        <div class="person"><div class="ph assoc"><img src="mono-clay.png" alt=""></div><h3><span lang="en">Marina</span><span lang="el">Μαρίνα</span></h3><div class="role"><span lang="en">Office secretary</span><span lang="el">Γραμματέας</span></div><p><span lang="en">The first point of contact at our office and your go-to person for whatever you need. Our office angel.</span><span lang="el">Το πρώτο σημείο επαφής στο γραφείο μας και ο άνθρωπός σας για ό,τι χρειαστείτε. Ο άγγελος του γραφείου μας.</span></p></div>
-        <div class="person"><div class="ph assoc"><img src="mono-clay.png" alt=""></div><h3><span lang="en">Our associates</span><span lang="el">Οι συνεργάτες μας</span></h3><div class="role"><span lang="en">Outside associates</span><span lang="el">Εξωτερικοί συνεργάτες</span></div><p><span lang="en">Trusted professionals who work alongside us when a case needs extra hands, while you keep one point of contact.</span><span lang="el">Αξιόπιστοι επαγγελματίες που συνεργάζονται μαζί μας όταν μια υπόθεση το χρειάζεται, ενώ εσείς έχετε πάντα ένα σημείο επαφής.</span></p></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="band dark" id="join" style="padding-block:72px">
-    <div class="wrap" style="display:flex;justify-content:space-between;align-items:center;gap:40px;flex-wrap:wrap">
-      <div style="display:flex;flex-direction:column;gap:18px;min-width:0;flex:1 1 520px">
-        <div class="eyebrow"><span lang="en">Join us</span><span lang="el">Ελάτε μαζί μας</span></div>
-        <h2><span lang="en">A small office, <em>with room to grow.</em></span><span lang="el">Ένα μικρό γραφείο <em>με προοπτικές.</em></span></h2>
-        <p class="lead"><span lang="en">If you would like to join us or work with us, send us an email. We are always open to collaborations.</span><span lang="el">Αν θέλετε να ενταχθείτε στην ομάδα μας ή να συνεργαστείτε μαζί μας, στείλτε μας email. Είμαστε πάντα ανοιχτοί σε συνεργασίες.</span></p>
-      </div>
-      <div style="display:flex;flex-direction:column;gap:12px;align-items:flex-start">
-        <div style="font-family:var(--serif);font-weight:300;font-size:26px;user-select:all">lawyers.cy@outlook.com</div>
-        <a class="btn" href="mailto:lawyers.cy@outlook.com?subject=Collaboration"><span lang="en">Email us</span><span lang="el">Στείλτε email</span></a>
-      </div>
-    </div>
-  </section>
-
-  <section class="band claybg" id="contact">
-    <div class="wrap contact">
-      <div style="display:flex;flex-direction:column;gap:28px;min-width:0">
-        <div class="eyebrow"><span lang="en">Contact us</span><span lang="el">Επικοινωνία</span></div>
-        <h2><span lang="en">Tell us about <em>your case.</em></span><span lang="el">Πείτε μας για <em>την υπόθεσή σας.</em></span></h2>
-        <form id="f" novalidate>
-          <div class="f"><label for="nm"><span lang="en">Name</span><span lang="el">Όνομα</span></label><input id="nm" name="nm" autocomplete="name" required></div>
-          <div class="f"><label for="em"><span lang="en">Email</span><span lang="el">Email</span></label><input id="em" name="em" type="email" autocomplete="email" required></div>
-          <div class="f"><label for="tl"><span lang="en">Phone</span><span lang="el">Τηλέφωνο</span></label><input id="tl" name="tl" type="tel" autocomplete="tel"></div>
-          <div class="f"><label for="sv"><span lang="en">Service</span><span lang="el">Υπηρεσία</span></label>
-            <select id="sv" name="sv">
-              <option>Property transaction / Συναλλαγή ακινήτου</option>
-              <option>Estates, wills &amp; trusts / Κληρονομιές, διαθήκες &amp; καταπιστεύματα</option>
-              <option>Corporate services / Εταιρικές υπηρεσίες</option>
-              <option>Litigation &amp; family court / Δικαστική υπόθεση &amp; Οικογενειακό Δικαστήριο</option>
-              <option>Immigration / Μετανάστευση</option>
-              <option>Other / Άλλο</option>
-            </select></div>
-          <div class="f full"><label for="ms"><span lang="en">Message</span><span lang="el">Μήνυμα</span></label><textarea id="ms" name="ms" required></textarea></div>
-          <div class="f full" style="flex-direction:row;align-items:center;gap:16px;flex-wrap:wrap">
-            <button class="btn" type="submit"><span lang="en">Prepare my message</span><span lang="el">Ετοιμασία μηνύματος</span></button>
-            <span id="err" style="color:#8A2E1F;font-size:15px" hidden></span>
-          </div>
-          <div class="out" id="out" hidden>
-            <strong><span lang="en">Your message is ready. Send it to lawyers.cy@outlook.com, or call us on +357 26 270 769.</span><span lang="el">Το μήνυμά σας είναι έτοιμο. Στείλτε το στο lawyers.cy@outlook.com ή τηλεφωνήστε μας στο +357 26 270 769.</span></strong>
-            <pre id="txt"></pre>
-            <div class="row"><a class="btn" id="mail" href="mailto:lawyers.cy@outlook.com"><span lang="en">Open in my email app</span><span lang="el">Άνοιγμα στο email μου</span></a><button class="btn ghost" type="button" id="cp"><span lang="en">Copy message</span><span lang="el">Αντιγραφή</span></button><span id="cpd" style="font-size:15px" hidden><span lang="en">Copied</span><span lang="el">Αντιγράφηκε</span></span></div>
-          </div>
-        </form>
-      </div>
-      <div style="display:flex;flex-direction:column;gap:28px;min-width:0">
-        <div class="eyebrow"><span lang="en">Find us</span><span lang="el">Βρείτε μας</span></div>
-        <dl class="find">
-          <div><dt><span lang="en">Address</span><span lang="el">Διεύθυνση</span></dt><dd><span lang="en">Michalaki Kyprianou 104, 8560 Pegeia, Paphos, Cyprus</span><span lang="el">Μιχαλάκη Κυπριανού 104, 8560 Πέγεια, Πάφος, Κύπρος</span></dd></div>
-          <div><dt><span lang="en">Telephone</span><span lang="el">Τηλέφωνο</span></dt><dd>+357 26 270 769</dd></div>
-          <div><dt>Fax</dt><dd>+357 26 270 759</dd></div>
-          <div><dt><span lang="en">New enquiries</span><span lang="el">Νέα αιτήματα</span></dt><dd>lawyers.cy@outlook.com</dd></div>
-          <div><dt><span lang="en">Office email</span><span lang="el">Email γραφείου</span></dt><dd>gpsalta@psaltalaw.com</dd></div>
-          <div><dt><span lang="en">Hours</span><span lang="el">Ώρες</span></dt><dd class="na"><span lang="en">By appointment</span><span lang="el">Κατόπιν ραντεβού</span></dd></div>
-        </dl>
-        <div><a class="btn ghost" href="https://www.google.com/maps/search/?api=1&amp;query=Michalaki+Kyprianou+104+8560+Pegeia+Cyprus" target="_blank" rel="noopener"><span lang="en">Open in Google Maps</span><span lang="el">Άνοιγμα στους Χάρτες Google</span></a></div>
-      </div>
-    </div>
-  </section>
-</main>
-
-<footer class="dark">
-  <div class="wrap foot">
-    <div class="mark"><img src="logo-light.png" alt="Georgia S. Psalta &amp; Associates LLC"></div>
-    <div style="display:flex;gap:24px;flex-wrap:wrap;align-items:center">
-      <a href="https://www.instagram.com/lawyers.cy/" target="_blank" rel="noopener" style="font-weight:600">Instagram @lawyers.cy</a>
-      <small>© 2026 Georgia S. Psalta &amp; Associates LLC</small>
-    </div>
-  </div>
-</footer>
-
-<script>
-(function(){
-  var root=document.documentElement;
-  function setLang(l){
-    root.dataset.lang=l; root.lang=l;
-    document.querySelectorAll('.langs button').forEach(function(b){b.setAttribute('aria-pressed', String(b.dataset.l===l));});
-    try{localStorage.setItem('lang',l);}catch(e){}
-  }
-  var saved='en'; try{saved=localStorage.getItem('lang')||'en';}catch(e){}
-  setLang(saved==='el'?'el':'en');
-  document.querySelectorAll('.langs button').forEach(function(b){b.addEventListener('click',function(){setLang(b.dataset.l);});});
-
-  var f=document.getElementById('f'), out=document.getElementById('out'), txt=document.getElementById('txt'), err=document.getElementById('err');
-  f.addEventListener('submit',function(e){
-    e.preventDefault();
-    var nm=f.nm.value.trim(), em=f.em.value.trim(), ms=f.ms.value.trim();
-    if(!nm||!em||!ms){
-      err.textContent = root.dataset.lang==='el' ? 'Συμπληρώστε όνομα, email και μήνυμα.' : 'Please fill in your name, email and message.';
-      err.hidden=false; out.hidden=true; return;
+<head>
+  <meta charset=utf8>
+  <meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <style>
+    :root {
+      color-scheme: light;
+      box-sizing: border-box;
+      padding-top: env(safe-area-inset-top, 0px);
+      padding-bottom: env(safe-area-inset-bottom, 0px)
     }
-    err.hidden=true;
-    var body='Name: '+nm+'\nEmail: '+em+(f.tl.value.trim()?'\nPhone: '+f.tl.value.trim():'')+'\n\n'+ms;
-    txt.textContent='To: lawyers.cy@outlook.com\nSubject: New enquiry: '+f.sv.value+'\n\n'+body;
-    document.getElementById('mail').href='mailto:lawyers.cy@outlook.com?subject='+encodeURIComponent('New enquiry: '+f.sv.value)+'&body='+encodeURIComponent(body);
-    out.hidden=false;
-    document.getElementById('cpd').hidden=true;
-  });
-  document.getElementById('cp').addEventListener('click',function(){
-    var done=function(){document.getElementById('cpd').hidden=false;};
-    var sel=function(){var r=document.createRange();r.selectNodeContents(txt);var s=getSelection();s.removeAllRanges();s.addRange(r);};
-    try{navigator.clipboard.writeText(txt.textContent).then(done,sel);}catch(e){sel();}
-  });
-})();
-</script>
 
-</body></html>
+    html {
+      scroll-padding-top: env(safe-area-inset-top, 0px)
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font: 14px -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #fff;
+      color: #000
+    }
+
+    img {
+      max-width: 100%
+    }
+
+    [hidden]:not([hidden=until-found i]) {
+      display: none !important
+    }
+  </style>
+</head>
+
+<body>
+  <title>Psalta Law Website</title>
+  <meta name="description"
+    content="Georgia S. Psalta & Associates LLC, advocates in Pegeia, Paphos. Property transactions, estates and estate planning, corporate services, litigation, divorce and immigration. Greek and English.">
+  <meta name="claude:viewport-fit-sides" content="cover">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;1,300&family=Mulish:wght@400;600;700&display=swap">
+  <link rel="icon" type="image/png" href="mono-clay.png">
+  <style>
+    /* Layout: one long page of alternating stone and charcoal bands; serif headlines, quiet sans body, hairline rules from the stationery. Single committed light look. */
+    :root {
+      --stone: #F4F2ED;
+      --clay: #D8D4CB;
+      --gray: #8A8685;
+      --gray-dk: #55514F;
+      --ink: #2B2A28;
+      --char: #33312F;
+      --char-2: #3D3B38;
+      --line: #C9C4BA;
+      --serif: 'Jost', 'Futura', 'Century Gothic', 'Avenir Next', sans-serif;
+      --sans: 'Mulish', 'Avenir Next', Avenir, 'Segoe UI', Helvetica, Arial, sans-serif;
+      color-scheme: light;
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    html {
+      scroll-behavior: smooth
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto
+      }
+    }
+
+    body {
+      background: var(--stone);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 17px;
+      line-height: 1.6
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0 0 auto;
+      height: env(safe-area-inset-top, 0px);
+      z-index: 10;
+      background: var(--stone)
+    }
+
+    html[data-lang="en"] [lang="el"],
+    html[data-lang="el"] [lang="en"] {
+      display: none
+    }
+
+    a {
+      color: inherit
+    }
+
+    :focus-visible {
+      outline: 2px solid var(--gray-dk);
+      outline-offset: 3px
+    }
+
+    .wrap {
+      max-width: 1160px;
+      margin: 0 auto;
+      padding-left: max(20px, env(safe-area-inset-left, 0px));
+      padding-right: max(20px, env(safe-area-inset-right, 0px))
+    }
+
+    .band {
+      padding-block: 96px
+    }
+
+    section[id] {
+      scroll-margin-top: 84px
+    }
+
+    .dark {
+      background: var(--char);
+      color: var(--stone)
+    }
+
+    .dark :focus-visible {
+      outline-color: var(--clay)
+    }
+
+    .claybg {
+      background: var(--clay)
+    }
+
+    .eyebrow {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .24em;
+      text-transform: uppercase;
+      color: var(--gray-dk)
+    }
+
+    .dark .eyebrow {
+      color: var(--clay)
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: var(--serif);
+      font-weight: 300;
+      line-height: 1.08;
+      margin: 0;
+      text-wrap: balance;
+      letter-spacing: -.005em
+    }
+
+    h1 {
+      font-size: clamp(40px, 6.2vw, 74px)
+    }
+
+    h2 {
+      font-size: clamp(32px, 4.4vw, 50px)
+    }
+
+    h3 {
+      font-size: 26px;
+      font-weight: 400
+    }
+
+    h1 em,
+    h2 em {
+      font-style: italic;
+      color: var(--gray-dk)
+    }
+
+    .dark h1 em,
+    .dark h2 em {
+      color: var(--clay)
+    }
+
+    p {
+      margin: 0;
+      max-width: 62ch
+    }
+
+    .lead {
+      font-size: 20px;
+      color: var(--gray-dk)
+    }
+
+    .dark .lead {
+      color: var(--clay)
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 26px;
+      font: 700 15px/1 var(--sans);
+      letter-spacing: .06em;
+      text-decoration: none;
+      border: 2px solid var(--ink);
+      background: var(--ink);
+      color: var(--stone);
+      cursor: pointer
+    }
+
+    .btn:hover {
+      background: var(--char-2)
+    }
+
+    .btn.ghost {
+      background: transparent;
+      color: var(--ink)
+    }
+
+    .btn.ghost:hover {
+      background: var(--clay)
+    }
+
+    .dark .btn {
+      background: var(--stone);
+      color: var(--ink);
+      border-color: var(--stone)
+    }
+
+    .dark .btn:hover {
+      background: var(--clay)
+    }
+
+    .dark .btn.ghost {
+      background: transparent;
+      color: var(--stone)
+    }
+
+    .dark .btn.ghost:hover {
+      background: var(--char-2)
+    }
+
+    /* header */
+    header {
+      position: sticky;
+      top: env(safe-area-inset-top, 0px);
+      z-index: 20;
+      background: var(--stone);
+      border-bottom: 1px solid var(--line)
+    }
+
+    .bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      min-height: 76px;
+      flex-wrap: wrap;
+      padding-block: 10px
+    }
+
+    .mark {
+      display: flex;
+      text-decoration: none;
+      line-height: 0
+    }
+
+    .mark img {
+      height: 48px;
+      width: auto
+    }
+
+    @media (max-width:520px) {
+      .mark img {
+        height: 38px
+      }
+    }
+
+    .hero-mono {
+      height: 120px;
+      width: auto;
+      margin-bottom: 28px
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+      flex-wrap: wrap
+    }
+
+    nav a.lnk {
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 600;
+      padding: 10px 0
+    }
+
+    nav a.lnk:hover {
+      text-decoration: underline;
+      text-underline-offset: 6px
+    }
+
+    .langs {
+      display: flex;
+      border: 1px solid var(--line)
+    }
+
+    .langs button {
+      font: 700 13px var(--sans);
+      letter-spacing: .08em;
+      padding: 10px 12px;
+      min-height: 40px;
+      background: transparent;
+      border: 0;
+      color: var(--gray-dk);
+      cursor: pointer
+    }
+
+    .langs button[aria-pressed="true"] {
+      background: var(--ink);
+      color: var(--stone)
+    }
+
+    @media (max-width:820px) {
+      nav a.lnk {
+        display: none
+      }
+    }
+
+    /* hero */
+    .hero {
+      padding-block: 88px 96px
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
+      gap: 64px;
+      align-items: end
+    }
+
+    .hero-copy {
+      display: flex;
+      flex-direction: column;
+      gap: 28px
+    }
+
+    .ctas {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap
+    }
+
+    .facts {
+      border-top: 2px solid var(--clay);
+      display: flex;
+      flex-direction: column
+    }
+
+    .facts div {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 18px 0;
+      border-bottom: 1px solid var(--char-2);
+      font-size: 16px
+    }
+
+    .facts dt {
+      color: var(--clay);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      padding-top: 4px
+    }
+
+    .facts dd {
+      margin: 0;
+      text-align: right;
+      font-family: var(--serif);
+      font-size: 24px
+    }
+
+    @media (max-width:860px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 48px
+      }
+    }
+
+    /* highlights */
+    .three {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0;
+      border-top: 2px solid var(--ink)
+    }
+
+    .three>div {
+      padding: 32px 32px 0 0;
+      display: flex;
+      flex-direction: column;
+      gap: 12px
+    }
+
+    .three>div+div {
+      padding-left: 32px;
+      border-left: 1px solid var(--line)
+    }
+
+    .three h3 {
+      font-size: 26px
+    }
+
+    .three p {
+      color: var(--gray-dk);
+      font-size: 16px
+    }
+
+    @media (max-width:760px) {
+      .three {
+        grid-template-columns: 1fr
+      }
+
+      .three>div,
+      .three>div+div {
+        padding: 28px 0;
+        border-left: 0;
+        border-bottom: 1px solid var(--line)
+      }
+    }
+
+    /* about */
+    .about {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr);
+      gap: 72px;
+      align-items: center
+    }
+
+    .portrait {
+      aspect-ratio: 4/5;
+      max-width: 100%;
+      background: var(--char);
+      color: var(--clay);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 14px
+    }
+
+    .creds {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      font-size: 15px;
+      color: var(--gray-dk);
+      border-left: 1px solid var(--gray);
+      padding-left: 16px
+    }
+
+    .portrait span {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .22em;
+      text-transform: uppercase
+    }
+
+    .about-copy {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+      min-width: 0
+    }
+
+    .sig {
+      font-family: var(--serif);
+      font-weight: 300;
+      font-size: 26px;
+      letter-spacing: .06em;
+      text-transform: uppercase
+    }
+
+    @media (max-width:860px) {
+      .about {
+        grid-template-columns: 1fr;
+        gap: 40px
+      }
+
+      .portrait {
+        max-width: 420px
+      }
+    }
+
+    /* services */
+    .svc-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 32px;
+      flex-wrap: wrap;
+      margin-bottom: 48px
+    }
+
+    .svc {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 18px
+    }
+
+    .card {
+      grid-column: span 2;
+      background: var(--stone);
+      padding: 32px 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      min-width: 0
+    }
+
+    .card.small {
+      grid-column: span 3
+    }
+
+    .card h3 {
+      font-size: 26px
+    }
+
+    .card p {
+      font-size: 16px;
+      color: var(--gray-dk)
+    }
+
+    .card ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      font-size: 16px;
+      color: var(--gray-dk)
+    }
+
+    .card li {
+      padding-left: 22px;
+      position: relative
+    }
+
+    .card li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: .72em;
+      width: 12px;
+      height: 1px;
+      background: var(--gray)
+    }
+
+    @media (max-width:900px) {
+      .svc {
+        grid-template-columns: 1fr
+      }
+
+      .card,
+      .card.small {
+        grid-column: auto
+      }
+    }
+
+    .ph.assoc {
+      background: var(--char);
+      display: flex;
+      align-items: center;
+      justify-content: center
+    }
+
+    .ph.assoc img {
+      height: 45%;
+      width: auto
+    }
+
+    /* process */
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 28px;
+      margin-top: 52px;
+      counter-reset: s
+    }
+
+    .step {
+      border-top: 1px solid var(--gray);
+      padding-top: 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px
+    }
+
+    .step b {
+      font-family: var(--serif);
+      font-size: 44px;
+      font-weight: 300;
+      line-height: 1;
+      color: var(--clay)
+    }
+
+    .step h3 {
+      font-size: 24px
+    }
+
+    .step p {
+      color: var(--clay);
+      font-size: 15.5px
+    }
+
+    @media (max-width:900px) {
+      .steps {
+        grid-template-columns: repeat(2, minmax(0, 1fr))
+      }
+    }
+
+    @media (max-width:520px) {
+      .steps {
+        grid-template-columns: 1fr
+      }
+    }
+
+    /* team */
+    .team {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 32px;
+      margin-top: 48px
+    }
+
+    .person {
+      display: flex;
+      flex-direction: column;
+      gap: 10px
+    }
+
+    .ph {
+      aspect-ratio: 1;
+      max-width: 100%;
+      background: var(--clay);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--serif);
+      font-size: 56px;
+      color: var(--gray-dk)
+    }
+
+    .person h3 {
+      font-size: 24px;
+      margin-top: 8px
+    }
+
+    .person .role {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--gray-dk)
+    }
+
+    .person p {
+      font-size: 15.5px;
+      color: var(--gray-dk)
+    }
+
+    @media (max-width:760px) {
+      .team {
+        grid-template-columns: 1fr;
+        max-width: 420px
+      }
+    }
+
+    /* contact */
+    .contact {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 72px
+    }
+
+    form {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px
+    }
+
+    .f {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      min-width: 0
+    }
+
+    .f.full {
+      grid-column: 1 / -1
+    }
+
+    label {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--gray-dk)
+    }
+
+    input,
+    select,
+    textarea {
+      font: 16px var(--sans);
+      color: var(--ink);
+      background: #FFFFFF;
+      border: 1px solid var(--line);
+      padding: 13px 14px;
+      min-height: 48px;
+      width: 100%;
+      border-radius: 0
+    }
+
+    textarea {
+      min-height: 140px;
+      resize: vertical
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      outline: 2px solid var(--ink);
+      outline-offset: 0;
+      border-color: var(--ink)
+    }
+
+    .out {
+      grid-column: 1 / -1;
+      background: var(--clay);
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px
+    }
+
+    .out pre {
+      margin: 0;
+      white-space: pre-wrap;
+      font: 15px/1.5 var(--sans);
+      background: var(--stone);
+      padding: 14px;
+      max-height: 220px;
+      overflow: auto
+    }
+
+    .out .row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      align-items: center
+    }
+
+    .find {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      border-top: 2px solid var(--ink)
+    }
+
+    .find div {
+      padding: 20px 0;
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      flex-direction: column;
+      gap: 4px
+    }
+
+    .find dt {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--gray-dk)
+    }
+
+    .find dd {
+      margin: 0;
+      font-size: 18px;
+      user-select: all
+    }
+
+    .find dd.na {
+      user-select: auto
+    }
+
+    @media (max-width:860px) {
+      .contact {
+        grid-template-columns: 1fr;
+        gap: 56px
+      }
+    }
+
+    @media (max-width:520px) {
+      form {
+        grid-template-columns: 1fr
+      }
+    }
+
+    footer {
+      padding-block: 56px 40px
+    }
+
+    .foot {
+      display: flex;
+      justify-content: space-between;
+      gap: 32px;
+      flex-wrap: wrap;
+      align-items: end
+    }
+
+    .foot small {
+      color: var(--clay);
+      font-size: 13px
+    }
+
+    .foot .mark img {
+      height: 42px
+    }
+  </style>
+
+  <header>
+    <div class="wrap bar">
+      <a class="mark" href="#top"><img src="logo-gray.png" alt="Georgia S. Psalta &amp; Associates LLC"></a>
+      <nav aria-label="Main">
+        <a class="lnk" href="#services"><span lang="en">Services</span><span lang="el">Υπηρεσίες</span></a>
+        <a class="lnk" href="#about"><span lang="en">About</span><span lang="el">Σχετικά</span></a>
+        <a class="lnk" href="#team"><span lang="en">Team</span><span lang="el">Ομάδα</span></a>
+        <div class="langs" role="group" aria-label="Language">
+          <button type="button" id="b-en" data-l="en" aria-pressed="true">EN</button>
+          <button type="button" id="b-el" data-l="el" aria-pressed="false">ΕΛ</button>
+        </div>
+        <a class="btn" href="#contact"><span lang="en">Contact</span><span lang="el">Επικοινωνία</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="dark hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow"><span lang="en">Advocates · Pegeia, Paphos</span><span lang="el">Δικηγόροι · Πέγεια,
+              Πάφος</span></div>
+          <h1><span lang="en">Property, estates and companies in Cyprus, <em>handled personally.</em></span><span
+              lang="el">Ακίνητα, κληρονομιές και εταιρείες στην Κύπρο, <em>με προσωπική φροντίδα.</em></span></h1>
+          <p class="lead"><span lang="en">A small law office where you speak directly to your lawyer, and your case gets
+              our full attention from the first meeting to the last signature.</span><span lang="el">Ένα μικρό
+              δικηγορικό γραφείο όπου μιλάτε απευθείας με τον δικηγόρο σας και η υπόθεσή σας έχει όλη μας την προσοχή,
+              από την πρώτη συνάντηση μέχρι την τελευταία υπογραφή.</span></p>
+          <div class="ctas">
+            <a class="btn" href="#contact"><span lang="en">Book an appointment</span><span lang="el">Κλείστε
+                ραντεβού</span></a>
+            <a class="btn ghost" href="#services"><span lang="en">Our services</span><span lang="el">Οι υπηρεσίες
+                μας</span></a>
+          </div>
+        </div>
+        <div style="min-width:0">
+          <img class="hero-mono" src="mono-clay.png" alt="">
+          <dl class="facts">
+            <div>
+              <dt><span lang="en">Advocate since</span><span lang="el">Δικηγόρος από</span></dt>
+              <dd>2012</dd>
+            </div>
+            <div>
+              <dt><span lang="en">Own office since</span><span lang="el">Δικό μας γραφείο από</span></dt>
+              <dd>2016</dd>
+            </div>
+            <div>
+              <dt><span lang="en">Languages</span><span lang="el">Γλώσσες</span></dt>
+              <dd><span lang="en">Greek &amp; English</span><span lang="el">Ελληνικά &amp; Αγγλικά</span></dd>
+            </div>
+            <div>
+              <dt><span lang="en">Office</span><span lang="el">Γραφείο</span></dt>
+              <dd><span lang="en">Pegeia, Paphos</span><span lang="el">Πέγεια, Πάφος</span></dd>
+            </div>
+            <div>
+              <dt><span lang="en">Telephone</span><span lang="el">Τηλέφωνο</span></dt>
+              <dd>+357 26 270 769</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="wrap">
+        <div class="three">
+          <div>
+            <h3><span lang="en">Full attention</span><span lang="el">Πλήρης προσοχή</span></h3>
+            <p><span lang="en">We take on only the work we can do properly, so your file is never one of
+                hundreds.</span><span lang="el">Αναλαμβάνουμε μόνο όση δουλειά μπορούμε να κάνουμε σωστά, ώστε η υπόθεσή
+                σας να μην είναι ποτέ μία από εκατοντάδες.</span></p>
+          </div>
+          <div>
+            <h3><span lang="en">Experience since 2012</span><span lang="el">Εμπειρία από το 2012</span></h3>
+            <p><span lang="en">A registered lawyer since 2012, with our own office since 2016, in property, estates and
+                company work.</span><span lang="el">Εγγεγραμμένη δικηγόρος από το 2012, με δικό μας γραφείο από το 2016,
+                σε ακίνητα, κληρονομιές και εταιρικά θέματα.</span></p>
+          </div>
+          <div>
+            <h3><span lang="en">Trusted associates</span><span lang="el">Αξιόπιστοι συνεργάτες</span></h3>
+            <p><span lang="en">When a case needs extra hands, outside associates work alongside us, and you still deal
+                with one point of contact.</span><span lang="el">Όταν μια υπόθεση χρειάζεται περισσότερα χέρια,
+                εξωτερικοί συνεργάτες δουλεύουν μαζί μας και εσείς έχετε πάντα ένα σημείο επαφής.</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band" id="about" style="padding-top:24px">
+      <div class="wrap about">
+        <img class="portrait" src="georgia.jpg" alt="Georgia S. Psalta, Advocate"
+          style="object-fit:cover;object-position:50% 20%;width:100%">
+
+        <div class="about-copy">
+          <div class="eyebrow"><span lang="en">About the office</span><span lang="el">Για το γραφείο</span></div>
+          <h2><span lang="en">A small office, <em>by choice.</em></span><span lang="el">Ένα μικρό γραφείο, <em>από
+                επιλογή.</em></span></h2>
+          <p><span lang="en">Georgia S. Psalta has been a registered lawyer since 2012 and opened her own law office in
+              Pegeia in 2016, to give clients something larger firms often can't: direct access to their lawyer, clear
+              updates, and honest advice.</span><span lang="el">Η Γεωργία Σ. Ψάλτα είναι εγγεγραμμένη δικηγόρος από το
+              2012 και άνοιξε το δικό της δικηγορικό γραφείο στην Πέγεια το 2016, για να προσφέρει ό,τι συχνά δεν
+              μπορούν τα μεγάλα γραφεία: άμεση πρόσβαση στον δικηγόρο σας, σαφή ενημέρωση και ειλικρινή συμβουλή.</span>
+          </p>
+          <p><span lang="en">We don't want to be the biggest firm in Cyprus. We want to do good work for people who
+              trust us: peace of mind for our clients, and a good, honest living for our families and
+              associates.</span><span lang="el">Δεν θέλουμε να γίνουμε το μεγαλύτερο γραφείο στην Κύπρο. Θέλουμε να
+              κάνουμε καλή δουλειά για ανθρώπους που μας εμπιστεύονται: ηρεμία για τους πελάτες μας και μια καλή, έντιμη
+              ζωή για τις οικογένειές μας και τους συνεργάτες μας.</span></p>
+          <div style="display:flex;flex-direction:column;gap:14px">
+            <div class="sig">Georgia S. Psalta</div>
+            <div class="creds">
+              <span lang="en">Advocate &amp; Legal Consultant</span><span lang="el">Δικηγόρος &amp; Νομική
+                Σύμβουλος</span>
+              <span>LLB (Middlesex University, U.K.)</span>
+              <span>P.G.Dip Law (Middlesex University, U.K.)</span>
+              <span lang="en">Member of the Cyprus Bar Association</span><span lang="el">Μέλος του Παγκύπριου
+                Δικηγορικού Συλλόγου</span>
+            </div>
+          </div>
+          <div><a class="btn" href="#contact"><span lang="en">Contact us</span><span lang="el">Επικοινωνήστε μαζί
+                μας</span></a></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band claybg" id="services">
+      <div class="wrap">
+        <div class="svc-head">
+          <div style="display:flex;flex-direction:column;gap:16px">
+            <div class="eyebrow"><span lang="en">What we do</span><span lang="el">Τι κάνουμε</span></div>
+            <h2><span lang="en">Our services</span><span lang="el">Οι υπηρεσίες μας</span></h2>
+          </div>
+          <p style="max-width:44ch;color:var(--gray-dk)"><span lang="en">For private clients, families and businesses in
+              Paphos and across Cyprus.</span><span lang="el">Για ιδιώτες, οικογένειες και επιχειρήσεις στην Πάφο και σε
+              όλη την Κύπρο.</span></p>
+        </div>
+        <div class="svc">
+          <article class="card">
+            <h3><span lang="en">Property transactions</span><span lang="el">Συναλλαγές ακινήτων</span></h3>
+            <ul>
+              <li><span lang="en">Purchases and sales</span><span lang="el">Αγορές και πωλήσεις</span></li>
+              <li><span lang="en">Title deed and permit checks</span><span lang="el">Έλεγχος τίτλου και αδειών</span>
+              </li>
+              <li><span lang="en">Contracts and Land Registry lodging</span><span lang="el">Συμβάσεις και κατάθεση στο
+                  Κτηματολόγιο</span></li>
+              <li><span lang="en">Transfers and gifts of property</span><span lang="el">Μεταβιβάσεις και δωρεές
+                  ακινήτων</span></li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3><span lang="en">Estates &amp; estate planning</span><span lang="el">Κληρονομιές &amp; σχεδιασμός
+                περιουσίας</span></h3>
+            <ul>
+              <li><span lang="en">Probate and administration of estates</span><span lang="el">Επικύρωση διαθηκών και
+                  διαχείριση περιουσίας θανόντων</span></li>
+              <li><span lang="en">Wills in Greek and English</span><span lang="el">Διαθήκες στα ελληνικά και
+                  αγγλικά</span></li>
+              <li><span lang="en">Estate planning and powers of attorney</span><span lang="el">Σχεδιασμός περιουσίας και
+                  πληρεξούσια</span></li>
+              <li><span lang="en">Trusts</span><span lang="el">Καταπιστεύματα</span></li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3><span lang="en">Corporate services</span><span lang="el">Εταιρικές υπηρεσίες</span></h3>
+            <ul>
+              <li><span lang="en">Company registration</span><span lang="el">Σύσταση εταιρειών</span></li>
+              <li><span lang="en">Changes of directors and shareholders</span><span lang="el">Αλλαγές διοικητικών
+                  συμβούλων και μετόχων</span></li>
+              <li><span lang="en">UBO register and annual confirmation</span><span lang="el">Μητρώο πραγματικών
+                  δικαιούχων και ετήσια επιβεβαίωση</span></li>
+              <li><span lang="en">Filings with the Registrar of Companies</span><span lang="el">Καταχωρήσεις στον Έφορο
+                  Εταιρειών</span></li>
+            </ul>
+          </article>
+          <article class="card small">
+            <h3><span lang="en">Litigation</span><span lang="el">Δικαστικές υποθέσεις</span></h3>
+            <p><span lang="en">Civil cases before the Cyprus courts, including property disputes, and family court
+                cases: divorce and divorce by mutual consent.</span><span lang="el">Αστικές υποθέσεις ενώπιον των
+                κυπριακών δικαστηρίων, όπως διαφορές για ακίνητα, και υποθέσεις Οικογενειακού Δικαστηρίου: διαζύγια και
+                συναινετικά διαζύγια.</span></p>
+          </article>
+          <article class="card small">
+            <h3><span lang="en">Immigration</span><span lang="el">Μετανάστευση</span></h3>
+            <p><span lang="en">Residence permits and related applications for people moving to Cyprus.</span><span
+                lang="el">Άδειες παραμονής και σχετικές αιτήσεις για όσους μετακομίζουν στην Κύπρο.</span></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="band dark">
+      <div class="wrap">
+        <div class="eyebrow"><span lang="en">How we work</span><span lang="el">Πώς δουλεύουμε</span></div>
+        <h2 style="margin-top:16px"><span lang="en">Four steps, <em>no surprises.</em></span><span lang="el">Τέσσερα
+            βήματα, <em>χωρίς εκπλήξεις.</em></span></h2>
+        <div class="steps">
+          <div class="step"><b>1</b>
+            <h3><span lang="en">First meeting</span><span lang="el">Πρώτη συνάντηση</span></h3>
+            <p><span lang="en">We listen, look at your documents and explain your options.</span><span lang="el">Ακούμε,
+                εξετάζουμε τα έγγραφά σας και εξηγούμε τις επιλογές σας.</span></p>
+          </div>
+          <div class="step"><b>2</b>
+            <h3><span lang="en">Clear plan</span><span lang="el">Σαφές πλάνο</span></h3>
+            <p><span lang="en">You receive the steps, the timing and our fee in writing.</span><span lang="el">Λαμβάνετε
+                γραπτώς τα βήματα, το χρονοδιάγραμμα και την αμοιβή μας.</span></p>
+          </div>
+          <div class="step"><b>3</b>
+            <h3><span lang="en">We do the work</span><span lang="el">Αναλαμβάνουμε</span></h3>
+            <p><span lang="en">We handle the paperwork and keep you updated along the way.</span><span
+                lang="el">Χειριζόμαστε τα έγγραφα και σας ενημερώνουμε σε κάθε στάδιο.</span></p>
+          </div>
+          <div class="step"><b>4</b>
+            <h3><span lang="en">Completion</span><span lang="el">Ολοκλήρωση</span></h3>
+            <p><span lang="en">You receive your final documents and a clear summary.</span><span lang="el">Λαμβάνετε τα
+                τελικά έγγραφα και μια σαφή σύνοψη.</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band" id="team">
+      <div class="wrap">
+        <div class="eyebrow"><span lang="en">Our team</span><span lang="el">Η ομάδα μας</span></div>
+        <h2 style="margin-top:16px"><span lang="en">The people <em>on your case</em></span><span lang="el">Οι άνθρωποι
+            <em>της υπόθεσής σας</em></span></h2>
+        <div class="team">
+          <div class="person"><img class="ph" src="georgia.jpg" alt=""
+              style="object-fit:cover;object-position:50% 15%;width:100%">
+            <h3>Georgia S. Psalta</h3>
+            <div class="role"><span lang="en">Advocate &amp; Legal Consultant · Founder</span><span lang="el">Δικηγόρος
+                &amp; Νομική Σύμβουλος · Ιδρύτρια</span></div>
+            <p><span lang="en">Registered lawyer since 2012. Opened her own office in Pegeia in 2016, and handles your
+                case from start to finish.</span><span lang="el">Εγγεγραμμένη δικηγόρος από το 2012. Άνοιξε το δικό της
+                γραφείο στην Πέγεια το 2016 και χειρίζεται την υπόθεσή σας από την αρχή ως το τέλος.</span></p>
+          </div>
+          <div class="person">
+            <div class="ph assoc"><img src="mono-clay.png" alt=""></div>
+            <h3><span lang="en">Marina</span><span lang="el">Μαρίνα</span></h3>
+            <div class="role"><span lang="en">Office secretary</span><span lang="el">Γραμματέας</span></div>
+            <p><span lang="en">The first point of contact at our office and your go-to person for whatever you need. Our
+                office angel.</span><span lang="el">Το πρώτο σημείο επαφής στο γραφείο μας και ο άνθρωπός σας για ό,τι
+                χρειαστείτε. Ο άγγελος του γραφείου μας.</span></p>
+          </div>
+          <div class="person">
+            <div class="ph assoc"><img src="mono-clay.png" alt=""></div>
+            <h3><span lang="en">Our associates</span><span lang="el">Οι συνεργάτες μας</span></h3>
+            <div class="role"><span lang="en">Outside associates</span><span lang="el">Εξωτερικοί συνεργάτες</span>
+            </div>
+            <p><span lang="en">Trusted professionals who work alongside us when a case needs extra hands, while you keep
+                one point of contact.</span><span lang="el">Αξιόπιστοι επαγγελματίες που συνεργάζονται μαζί μας όταν μια
+                υπόθεση το χρειάζεται, ενώ εσείς έχετε πάντα ένα σημείο επαφής.</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band dark" id="join" style="padding-block:72px">
+      <div class="wrap" style="display:flex;justify-content:space-between;align-items:center;gap:40px;flex-wrap:wrap">
+        <div style="display:flex;flex-direction:column;gap:18px;min-width:0;flex:1 1 520px">
+          <div class="eyebrow"><span lang="en">Join us</span><span lang="el">Ελάτε μαζί μας</span></div>
+          <h2><span lang="en">A small office, <em>with room to grow.</em></span><span lang="el">Ένα μικρό γραφείο <em>με
+                προοπτικές.</em></span></h2>
+          <p class="lead"><span lang="en">If you would like to join us or work with us, send us an email. We are always
+              open to collaborations.</span><span lang="el">Αν θέλετε να ενταχθείτε στην ομάδα μας ή να συνεργαστείτε
+              μαζί μας, στείλτε μας email. Είμαστε πάντα ανοιχτοί σε συνεργασίες.</span></p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:12px;align-items:flex-start">
+          <div style="font-family:var(--serif);font-weight:300;font-size:26px;user-select:all">lawyers.cy@outlook.com
+          </div>
+          <a class="btn" href="mailto:lawyers.cy@outlook.com?subject=Collaboration"><span lang="en">Email us</span><span
+              lang="el">Στείλτε email</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="band claybg" id="contact">
+      <div class="wrap contact">
+        <div style="display:flex;flex-direction:column;gap:28px;min-width:0">
+          <div class="eyebrow"><span lang="en">Contact us</span><span lang="el">Επικοινωνία</span></div>
+          <h2><span lang="en">Tell us about <em>your case.</em></span><span lang="el">Πείτε μας για <em>την υπόθεσή
+                σας.</em></span></h2>
+          <form id="f" novalidate>
+            <div class="f"><label for="nm"><span lang="en">Name</span><span lang="el">Όνομα</span></label><input id="nm"
+                name="nm" autocomplete="name" required></div>
+            <div class="f"><label for="em"><span lang="en">Email</span><span lang="el">Email</span></label><input
+                id="em" name="em" type="email" autocomplete="email" required></div>
+            <div class="f"><label for="tl"><span lang="en">Phone</span><span lang="el">Τηλέφωνο</span></label><input
+                id="tl" name="tl" type="tel" autocomplete="tel"></div>
+            <div class="f"><label for="sv"><span lang="en">Service</span><span lang="el">Υπηρεσία</span></label>
+              <select id="sv" name="sv">
+                <option>Property transaction / Συναλλαγή ακινήτου</option>
+                <option>Estates, wills &amp; trusts / Κληρονομιές, διαθήκες &amp; καταπιστεύματα</option>
+                <option>Corporate services / Εταιρικές υπηρεσίες</option>
+                <option>Litigation &amp; family court / Δικαστική υπόθεση &amp; Οικογενειακό Δικαστήριο</option>
+                <option>Immigration / Μετανάστευση</option>
+                <option>Other / Άλλο</option>
+              </select>
+            </div>
+            <div class="f full"><label for="ms"><span lang="en">Message</span><span
+                  lang="el">Μήνυμα</span></label><textarea id="ms" name="ms" required></textarea></div>
+            <div class="f full" style="flex-direction:row;align-items:center;gap:16px;flex-wrap:wrap">
+              <button class="btn" type="submit"><span lang="en">Prepare my message</span><span lang="el">Ετοιμασία
+                  μηνύματος</span></button>
+              <span id="err" style="color:#8A2E1F;font-size:15px" hidden></span>
+            </div>
+            <div class="out" id="out" hidden>
+              <strong><span lang="en">Your message is ready. Send it to lawyers.cy@outlook.com, or call us on +357 26
+                  270 769.</span><span lang="el">Το μήνυμά σας είναι έτοιμο. Στείλτε το στο lawyers.cy@outlook.com ή
+                  τηλεφωνήστε μας στο +357 26 270 769.</span></strong>
+              <pre id="txt"></pre>
+              <div class="row"><a class="btn" id="mail" href="mailto:lawyers.cy@outlook.com"><span lang="en">Open in my
+                    email app</span><span lang="el">Άνοιγμα στο email μου</span></a><button class="btn ghost"
+                  type="button" id="cp"><span lang="en">Copy message</span><span
+                    lang="el">Αντιγραφή</span></button><span id="cpd" style="font-size:15px" hidden><span
+                    lang="en">Copied</span><span lang="el">Αντιγράφηκε</span></span></div>
+            </div>
+          </form>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:28px;min-width:0">
+          <div class="eyebrow"><span lang="en">Find us</span><span lang="el">Βρείτε μας</span></div>
+          <dl class="find">
+            <div>
+              <dt><span lang="en">Address</span><span lang="el">Διεύθυνση</span></dt>
+              <dd><span lang="en">Michalaki Kyprianou 104, 8560 Pegeia, Paphos, Cyprus</span><span lang="el">Μιχαλάκη
+                  Κυπριανού 104, 8560 Πέγεια, Πάφος, Κύπρος</span></dd>
+            </div>
+            <div>
+              <dt><span lang="en">Telephone</span><span lang="el">Τηλέφωνο</span></dt>
+              <dd>+357 26 270 769</dd>
+            </div>
+            <div>
+              <dt>Fax</dt>
+              <dd>+357 26 270 759</dd>
+            </div>
+            <div>
+              <dt><span lang="en">New enquiries</span><span lang="el">Νέα αιτήματα</span></dt>
+              <dd>lawyers.cy@outlook.com</dd>
+            </div>
+            <div>
+              <dt><span lang="en">Office email</span><span lang="el">Email γραφείου</span></dt>
+              <dd>gpsalta@psaltalaw.com</dd>
+            </div>
+            <div>
+              <dt><span lang="en">Hours</span><span lang="el">Ώρες</span></dt>
+              <dd class="na"><span lang="en">By appointment</span><span lang="el">Κατόπιν ραντεβού</span></dd>
+            </div>
+          </dl>
+          <div><a class="btn ghost"
+              href="https://www.google.com/maps/search/?api=1&amp;query=Michalaki+Kyprianou+104+8560+Pegeia+Cyprus"
+              target="_blank" rel="noopener"><span lang="en">Open in Google Maps</span><span lang="el">Άνοιγμα στους
+                Χάρτες Google</span></a></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="dark">
+    <div class="wrap foot">
+      <div class="mark"><img src="logo-light.png" alt="Georgia S. Psalta &amp; Associates LLC"></div>
+      <div style="display:flex;gap:24px;flex-wrap:wrap;align-items:center">
+        <a href="https://www.instagram.com/lawyers.cy/" target="_blank" rel="noopener" style="font-weight:600">Instagram
+          @lawyers.cy</a>
+        <small>© 2026 Georgia S. Psalta &amp; Associates LLC</small>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var root = document.documentElement;
+      function setLang(l) {
+        root.dataset.lang = l; root.lang = l;
+        document.querySelectorAll('.langs button').forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.l === l)); });
+        try { localStorage.setItem('lang', l); } catch (e) { }
+      }
+      var saved = 'en'; try { saved = localStorage.getItem('lang') || 'en'; } catch (e) { }
+      setLang(saved === 'el' ? 'el' : 'en');
+      document.querySelectorAll('.langs button').forEach(function (b) { b.addEventListener('click', function () { setLang(b.dataset.l); }); });
+
+      var f = document.getElementById('f'), out = document.getElementById('out'), txt = document.getElementById('txt'), err = document.getElementById('err');
+      f.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var nm = f.nm.value.trim(), em = f.em.value.trim(), ms = f.ms.value.trim();
+        if (!nm || !em || !ms) {
+          err.textContent = root.dataset.lang === 'el' ? 'Συμπληρώστε όνομα, email και μήνυμα.' : 'Please fill in your name, email and message.';
+          err.hidden = false; out.hidden = true; return;
+        }
+        err.hidden = true;
+        var body = 'Name: ' + nm + '\nEmail: ' + em + (f.tl.value.trim() ? '\nPhone: ' + f.tl.value.trim() : '') + '\n\n' + ms;
+        txt.textContent = 'To: lawyers.cy@outlook.com\nSubject: New enquiry: ' + f.sv.value + '\n\n' + body;
+        document.getElementById('mail').href = 'mailto:lawyers.cy@outlook.com?subject=' + encodeURIComponent('New enquiry: ' + f.sv.value) + '&body=' + encodeURIComponent(body);
+        out.hidden = false;
+        document.getElementById('cpd').hidden = true;
+      });
+      document.getElementById('cp').addEventListener('click', function () {
+        var done = function () { document.getElementById('cpd').hidden = false; };
+        var sel = function () { var r = document.createRange(); r.selectNodeContents(txt); var s = getSelection(); s.removeAllRanges(); s.addRange(r); };
+        try { navigator.clipboard.writeText(txt.textContent).then(done, sel); } catch (e) { sel(); }
+      });
+    })();
+  </script>
+
+</body>
+
+</html>
