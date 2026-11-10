@@ -1057,8 +1057,7 @@
         <h2 style="margin-top:16px"><span lang="en">The people <em>on your case</em></span><span lang="el">Οι άνθρωποι
             <em>της υπόθεσής σας</em></span></h2>
         <div class="team">
-          <div class="person"><img class="ph" src="georgia.jpg" alt=""
-              style="object-fit:cover;object-position:50% 15%;width:100%">
+          <div class="person"><img class="ph" src="georgia.jpg" alt="" style="object-fit:cover;object-position:50% 15%;width:100%">
             <h3>Georgia S. Psalta</h3>
             <div class="role"><span lang="en">Advocate &amp; Legal Consultant · Founder</span><span lang="el">Δικηγόρος
                 &amp; Νομική Σύμβουλος · Ιδρύτρια</span></div>
@@ -1066,9 +1065,8 @@
                 case from start to finish.</span><span lang="el">Εγγεγραμμένη δικηγόρος από το 2012. Άνοιξε το δικό της
                 γραφείο στην Πέγεια το 2016 και χειρίζεται την υπόθεσή σας από την αρχή ως το τέλος.</span></p>
           </div>
-          <div class="person">
-            <div class="ph assoc"><img src="mono-clay.png" alt=""></div>
-            <h3><span lang="en">Marina</span><span lang="el">Μαρίνα</span></h3>
+          <div class="person"><img class="ph" src="MarinaSavas.jpg" alt="" style="object-fit:cover;object-position:50% 15%;width:100%">
+            <h3><span lang="en">Marina Savva</span><span lang="el">Μαρίνα Σάββα</span></h3>
             <div class="role"><span lang="en">Office secretary</span><span lang="el">Γραμματέας</span></div>
             <p><span lang="en">The first point of contact at our office and your go-to person for whatever you need. Our
                 office angel.</span><span lang="el">Το πρώτο σημείο επαφής στο γραφείο μας και ο άνθρωπός σας για ό,τι
@@ -1098,9 +1096,9 @@
               μαζί μας, στείλτε μας email. Είμαστε πάντα ανοιχτοί σε συνεργασίες.</span></p>
         </div>
         <div style="display:flex;flex-direction:column;gap:12px;align-items:flex-start">
-          <div style="font-family:var(--serif);font-weight:300;font-size:26px;user-select:all">lawyers.cy@outlook.com
+          <div style="font-family:var(--serif);font-weight:300;font-size:26px;user-select:all">gpsalta@psaltalaw.com
           </div>
-          <a class="btn" href="mailto:lawyers.cy@outlook.com?subject=Collaboration"><span lang="en">Email us</span><span
+          <a class="btn" href="mailto:gpsalta@psaltalaw.com?subject=Collaboration"><span lang="en">Email us</span><span
               lang="el">Στείλτε email</span></a>
         </div>
       </div>
@@ -1137,11 +1135,11 @@
               <span id="err" style="color:#8A2E1F;font-size:15px" hidden></span>
             </div>
             <div class="out" id="out" hidden>
-              <strong><span lang="en">Your message is ready. Send it to lawyers.cy@outlook.com, or call us on +357 26
-                  270 769.</span><span lang="el">Το μήνυμά σας είναι έτοιμο. Στείλτε το στο lawyers.cy@outlook.com ή
+              <strong><span lang="en">Your message is ready. Send it to gpsalta@psaltalaw.com, or call us on +357 26 270
+                  769.</span><span lang="el">Το μήνυμά σας είναι έτοιμο. Στείλτε το στο gpsalta@psaltalaw.com ή
                   τηλεφωνήστε μας στο +357 26 270 769.</span></strong>
               <pre id="txt"></pre>
-              <div class="row"><a class="btn" id="mail" href="mailto:lawyers.cy@outlook.com"><span lang="en">Open in my
+              <div class="row"><a class="btn" id="mail" href="mailto:gpsalta@psaltalaw.com"><span lang="en">Open in my
                     email app</span><span lang="el">Άνοιγμα στο email μου</span></a><button class="btn ghost"
                   type="button" id="cp"><span lang="en">Copy message</span><span
                     lang="el">Αντιγραφή</span></button><span id="cpd" style="font-size:15px" hidden><span
@@ -1166,16 +1164,13 @@
               <dd>+357 26 270 759</dd>
             </div>
             <div>
-              <dt><span lang="en">New enquiries</span><span lang="el">Νέα αιτήματα</span></dt>
-              <dd>lawyers.cy@outlook.com</dd>
-            </div>
-            <div>
-              <dt><span lang="en">Office email</span><span lang="el">Email γραφείου</span></dt>
+              <dt>Email</dt>
               <dd>gpsalta@psaltalaw.com</dd>
             </div>
             <div>
               <dt><span lang="en">Hours</span><span lang="el">Ώρες</span></dt>
-              <dd class="na"><span lang="en">By appointment</span><span lang="el">Κατόπιν ραντεβού</span></dd>
+              <dd class="na"><span lang="en">Monday to Thursday 8:00 to 16:00<br>Friday 8:00 to 13:00</span><span
+                  lang="el">Δευτέρα έως Πέμπτη 8:00 έως 16:00<br>Παρασκευή 8:00 έως 13:00</span></dd>
             </div>
           </dl>
           <div><a class="btn ghost"
@@ -1220,8 +1215,8 @@
         }
         err.hidden = true;
         var body = 'Name: ' + nm + '\nEmail: ' + em + (f.tl.value.trim() ? '\nPhone: ' + f.tl.value.trim() : '') + '\n\n' + ms;
-        txt.textContent = 'To: lawyers.cy@outlook.com\nSubject: New enquiry: ' + f.sv.value + '\n\n' + body;
-        document.getElementById('mail').href = 'mailto:lawyers.cy@outlook.com?subject=' + encodeURIComponent('New enquiry: ' + f.sv.value) + '&body=' + encodeURIComponent(body);
+        txt.textContent = 'To: gpsalta@psaltalaw.com\nSubject: New enquiry: ' + f.sv.value + '\n\n' + body;
+        document.getElementById('mail').href = 'mailto:gpsalta@psaltalaw.com?subject=' + encodeURIComponent('New enquiry: ' + f.sv.value) + '&body=' + encodeURIComponent(body);
         out.hidden = false;
         document.getElementById('cpd').hidden = true;
       });
